@@ -8,20 +8,29 @@ html, body{
 .home{
   position: absolute;
 	font-size:22px;
-	border-radius:50%;
-	width:100px;
-	height:100px;
-  background: limegreen;
+	width: 200px;
+	height:200px;
   top: 40px;
   left: 50px;
+}
+
+.home img{
+  width: 200px;
+  height: 200px;
 }
 .items {
   position: fixed;
   top: 10px;
-  left: 10px;
+  width: 100vw;
   display: flex;
   gap: 10px;
   z-index: 100;
+  justify-content: center;
+}
+
+.items img {
+    width: 50px;
+    height: 50px;
 }
 .item {
   width: 70px;
@@ -31,15 +40,17 @@ html, body{
 .fish {
   position: absolute; /* make sure the element can move */
   animation: swimFish 14s linear infinite;
+  
 }
+
 
 @keyframes swimFish {
   0% {
-    left: 0;
-		
+    left: 100%;
+    
   }
   100% {
-    left: 100%;
+    left: 0;
   }
 }
 
@@ -62,4 +73,6 @@ html, body{
   from { transform: rotate(-5deg); }
   to { transform: rotate(5deg); }
 }
+
+
 

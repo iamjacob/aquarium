@@ -1,8 +1,8 @@
 // --- Trash data ---
 const trashData = [
-  { img: "https://img.freepik.com/free-photo/plastic-bottle-isolated_144627-28234.jpg?w=200", name: "plastic bottle" },
-  { img: "https://img.freepik.com/free-photo/aluminum-can-isolated_144627-28240.jpg?w=200", name: "aluminum can" },
-  { img: "https://img.freepik.com/free-photo/cardboard-box-isolated_144627-28233.jpg?w=200", name: "cardboard box" },
+  { img: "../assets/svg/cykel.svg", name: "cykel" },
+  { img: "../assets/svg/gummistoevle.svg", name: "Gummistøvler" },
+  { img: "../assets/svg/flaske.svg", name: "Flaske" },
 ];
 
 const itemsContainer = document.querySelector(".items");
@@ -68,13 +68,12 @@ function setupGame() {
 
 // --- Create fixed fish (danger!) ---
 function createFish() {
-  fish = document.createElement("div");
+  fish = document.createElement("img");
   fish.className = "fish";
-  fish.innerHTML = "🐟";
+  fish.src = "assets/svg/shark.svg";
   //fish.style.position = "absolute"; // 👈 stays visible on scroll
   fish.style.top = "550px";
   fish.style.left = "10vw";
-  fish.style.fontSize = "48px";
   document.body.appendChild(fish);
 
 	/*
