@@ -1,4 +1,5 @@
 html, body{
+  margin:0;
 	height: fit-content;
 	background: linear-gradient(#A2BFEB 0%, #315B9A 77%);
 	position:relative;
@@ -71,7 +72,7 @@ html, body{
 .fish {
   position: absolute; /* make sure the element can move */
   animation: swimFish 14s linear infinite;
-  
+
 }
 
 
@@ -104,6 +105,91 @@ html, body{
   from { transform: rotate(-5deg); }
   to { transform: rotate(5deg); }
 }
+
+
+.nemo {
+    position: absolute; 
+    animation: nemoSwim 7s ease-in infinite;
+    top: 2000px;
+}
+
+@keyframes nemoSwim {
+0% {
+  right: 100%;
+}
+
+100% {
+  right: 0%;
+}
+}
+
+.dory {
+  position: absolute;
+  animation: dorySwim  7s ease-in-out infinite;
+  top: 2500px;
+}
+
+@keyframes dorySwim {
+  0% {
+    right: 100% 
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+.fiskVar1 {
+  position: absolute;
+  animation: fiskVar1Swim 11s linear infinite;
+  top: 500px;
+}
+
+@keyframes fiskVar1Swim {
+    0% {
+    right: 100% 
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+.fiskVar2 {
+  position: absolute;
+  animation: fiskVar2Swim 11.5s linear infinite;
+  top: 480px;
+}
+
+@keyframes fiskVar2Swim {
+    0% {
+    right: 100% 
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+.fiskVar3 {
+  position: absolute;
+  animation: fiskVar3Swim 12s linear infinite;
+  top: 520px;
+}
+
+@keyframes fiskVar3Swim {
+    0% {
+    right: 100% 
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+
+
+
 
 
 
