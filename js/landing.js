@@ -1,70 +1,157 @@
 "use strict";
-//opbygger vores js struktur med Array som indeholder js objekter
-//her laver vi et Array
-const carInfo = [
+
+// 🪸 Array med alle fiskene fra dit info-board
+const seaInfo = [
   {
-    className: "car1",
-    carBrand: "Ford",
-    carModel: "Mustang",
-    releaseYear: 1974,
-    color: "red",
-    fuelType: "Diesel",
+    className: "sea1",
+    animalName: "Vandmand",
+    age: "~1 milliard år",
+    funFact: "Vandmænd er nogle af de ældste dyr på Jorden! De har ingen hjerne eller hjerte – kun vand og gelé.",
+    uniqueThing: "Kan lyse i mørket som et undervands-spøgelse 👻",
+    soundSrc: "sounds/vandmand.mp3",
+    soundLine: "Heeej, jeg er en vandmand! Jeg danser som gelé gennem havet og kan lyse i mørket!",
   },
   {
-    className: "car2",
-    carBrand: "Volvo",
-    carModel: "242 Series",
-    releaseYear: 1982,
-    color: "white",
-    fuelType: "Benzin",
+    className: "sea2",
+    animalName: "Koraller og Svampe",
+    age: "~600 mio. år",
+    funFact: "Koraller og svampe var nogle af de første til at bygge undervandsbyer for fisk og smådyr.",
+    uniqueThing: "Er havets arkitekter 🏗️ – de bygger hele koralbyer!",
+    soundSrc: "sounds/koraller.mp3",
+    soundLine: "Velkommen til min koralby! Jeg bygger hjem til alle havets dyr!",
   },
   {
-    className: "car3",
-    carBrand: "Volkswagen",
-    carModel: "Passat",
-    releaseYear: 1979,
-    color: "blue",
-    fuelType: "Diesel",
+    className: "sea3",
+    animalName: "Søanemone",
+    age: "~540 mio. år",
+    funFact: "Søanemonen ligner en blomst, men den er faktisk et rovdyr med fangarme, der fanger små fisk!",
+    uniqueThing: "Har usynlige superklæbrige arme 🦸‍♀️",
+    soundSrc: "sounds/soeanemone.mp3",
+    soundLine: "Se mine seje arme! De er usynlige – og superklæbrige!",
+  },
+  {
+    className: "sea4",
+    animalName: "Haj",
+    age: "~450 mio. år",
+    funFact: "Hajer har eksisteret længere end dinosaurerne og har et super-skarpt sanseapparat!",
+    uniqueThing: "Kan lugte én dråbe blod i et helt svømmebassin 🩸",
+    soundSrc: "sounds/haj.mp3",
+    soundLine: "Jeg er hajen! Havets superhelt – jeg kan lugte alt og svømmer som lynet!",
+  },
+  {
+    className: "sea5",
+    animalName: "Krabbe",
+    age: "~200 mio. år",
+    funFact: "Krabber går sidelæns, men de er lynhurtige, når de ser mad – eller farer!",
+    uniqueThing: "Er mester i at breakdance 🕺 (sidelæns!)",
+    soundSrc: "sounds/krabbe.mp3",
+    soundLine: "Klik klik! Jeg går sidelæns som en dansemaskine – pas på mine klør!",
+  },
+  {
+    className: "sea6",
+    animalName: "Urfisk",
+    age: "~150 mio. år",
+    funFact: "De første fisk, der lignede moderne fisk – de fik finner, skæl og begyndte at svømme hurtigt!",
+    uniqueThing: "Havets oldefar med turbo-finner 🧓💨",
+    soundSrc: "sounds/urfisk.mp3",
+    soundLine: "Jeg er urfisken! Den første med turbo-finner – uden mig, ingen Nemo!",
+  },
+  {
+    className: "sea7",
+    animalName: "Pindsvinefisk",
+    age: "~80 mio. år",
+    funFact: "Når den bliver bange, puster den sig op som en ballon fuld af pigge!",
+    uniqueThing: "Kan blive dobbelt så stor på ét sekund 🎈",
+    soundSrc: "sounds/pindsvinefisk.mp3",
+    soundLine: "Pffffft! Jeg puster mig op som en ballon – ingen tør røre mig!",
+  },
+  {
+    className: "sea8",
+    animalName: "Tun",
+    age: "~50 mio. år",
+    funFact: "Tunen er havets fartdjævel! Den kan svømme hurtigere end en bil i byen!",
+    uniqueThing: "Kan slå delfiner i kapløb 🏁",
+    soundSrc: "sounds/tun.mp3",
+    soundLine: "Wrooom! Jeg er tunfisken – havets raket! Ingen fanger mig!",
+  },
+  {
+    className: "sea9",
+    animalName: "Klovnefisk & Dory",
+    age: "~50 mio. år",
+    funFact: "Klovnefisk lever i søanemoner og bliver ikke brændt af dem. Dory glemmer alt, men er altid glad!",
+    uniqueThing: "Klovnefisk kan skifte køn, og Dory kan tale hvalsprog 🐋",
+    soundSrc: "sounds/klovnefisk.mp3",
+    soundLine: "Hej, jeg er Nemo! Og jeg er Dory! … øh, hvad snakkede vi om igen?",
+  }, {
+    className: "trash1",
+    animalName: "Gummistøvle",
+    age: "Fundet i havet for nylig",
+    funFact: "En glemt gummistøvle kan flyde rundt i havet i mange år. Nogle fisk prøver endda at gemme sig i den!",
+    uniqueThing: "Kan bruges som mini-hus for en krabbe 🏠",
+    soundSrc: "sounds/gummistoevle.mp3",
+    soundLine: "Ups! Jeg burde være på land – hjælp mig tilbage, før jeg bliver et krabbehjem!",
+  },
+  {
+    className: "trash2",
+    animalName: "Sodavandsdåse",
+    age: "Flyder i havet i op til 200 år!",
+    funFact: "Aluminium kan genbruges uendeligt mange gange, men i havet gør den skade på dyr og koraller.",
+    uniqueThing: "Kan forvandles til en cykel, hvis den bliver genbrugt 🚴‍♂️",
+    soundSrc: "sounds/daase.mp3",
+    soundLine: "Jeg er en sodavandsdåse – genbrug mig, så jeg kan blive til noget nyt og fedt!",
+  },
+  {
+    className: "trash3",
+    animalName: "Plastikpose",
+    age: "Over 500 år i naturen!",
+    funFact: "Havskildpadder tror ofte, jeg er en vandmand – og det kan gå galt, hvis de spiser mig!",
+    uniqueThing: "Kan blive til en t-shirt, hvis jeg bliver genbrugt 👕",
+    soundSrc: "sounds/plastikpose.mp3",
+    soundLine: "Hej, jeg er en plastikpose! Jeg vil meget hellere være genbrugt end flyde i havet!",
   },
 ];
 
-//venter med at kører JS indtil HTML er loadet helt
+// 🐚 Når HTML er klar
 document.addEventListener("DOMContentLoaded", () => {
-  //finder tooltip id og gemmer det i en variabel
   const tooltip = document.getElementById("tooltip");
-  //funktion der viser tooltip med biloplysninger
-  //parametere html = den tekst indeholdende html-tags som vi vil vise i tooltip'en
+
   function showTooltip(html) {
-    //Indsætter teksten i tooltip'en
     if (tooltip) {
       tooltip.innerHTML = html;
-      //gør tooltip'en synlig med css klassen
       tooltip.classList.add("is-visible");
-      setTimeout(function () {
-        tooltip.classList.remove("is-visible");
-      }, 8000);
+      setTimeout(() => tooltip.classList.remove("is-visible"), 8000);
     }
   }
 
-  //slå dette op i chat, forstod det virkelig ikke
-  //du mangler dollarstegn
-  carInfo.forEach((car) => {
-    document.querySelectorAll("." + car.className).forEach((elem) => {
+  // 🎣 Tilføj tooltip + lyd på hover / click
+  seaInfo.forEach((sea) => {
+    //const sound = new Audio(sea.soundSrc);
+
+    document.querySelectorAll("." + sea.className).forEach((elem) => {
+      // Tooltip på hover
       elem.addEventListener("mouseover", () => {
-        const carDetails = `
-        <strong>${car.carBrand} ${car.carModel}</strong><br>
-        Release Year: ${car.releaseYear}<br>
-        Color: ${car.color}<br>
-        Fuel: ${car.fuelType}
+        const html = `
+          <strong>${sea.animalName}</strong><br>
+          Alder: ${sea.age}<br>
+          Sjov fakta: ${sea.funFact}<br>
+          Superkraft: ${sea.uniqueThing}
         `;
-        showTooltip(carDetails);
+        showTooltip(html);
       });
+
+    //   // Lyd på click
+    //   elem.addEventListener("click", () => {
+    //     sound.play();
+    //     showTooltip(`<em>${sea.soundLine}</em>`);
+    //   });
     });
   });
+});
 
 
 
-  
+
+
 //   //Hent DOM elementer
 //   //Her er 6 dom elementer
 
@@ -139,4 +226,4 @@ document.addEventListener("DOMContentLoaded", () => {
 //       scene.classList.toggle("night");
 //     });
 //   }
-});
+//});

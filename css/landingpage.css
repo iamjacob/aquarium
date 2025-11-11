@@ -59,7 +59,7 @@ body {
 
 @keyframes talk {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(0);
     opacity: 1;
   }
   25% {
@@ -115,10 +115,22 @@ body {
     height: 100vh;
     align-items: center;
     gap: 150px;
+    pointer-events: none;
 }
 
 .options a{
     transform: scale(2);
+    transition: ease .2s all;
+    pointer-events: auto;
+
+}
+
+.options a:hover{
+    transform: scale(1.8);
+}
+
+.options a:hover + .nutte{
+    transform: scale(.8);
 }
 
 /*
