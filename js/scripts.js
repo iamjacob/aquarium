@@ -1,3 +1,5 @@
+"usestrict";
+
 // --- Trash data ---
 const trashData = [
   { img: "../assets/svg/cykel.svg", name: "cykel" },
