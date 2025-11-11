@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="landingpage.css">
+    <link rel="stylesheet" href="./css/landingpage.css">
     <title>Document</title>
 </head>
 <body>
@@ -14,12 +14,99 @@
     Det tager 2 minutter og bliver mega hyggeligt!
 </p>
 
-    <object data="./assets/svg/bg.svg" type="image/svg+xml">
+    <!--<object data="./assets/svg/bg.svg" type="image/svg+xml"></object>-->
+
+<style>
+  .puff-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    perspective: 600px; /* gives depth illusion */
+  }
+
+  .puff-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease,
+      z-index 0.6s ease;
+    transform-origin: center;
+  }
+
+  .puff-wrapper :not(.hidden) {
+    z-index: 2;
+  }
+
+  .puff-wrapper .hidden {
+    opacity: 0;
+    transform: scale(0.85) rotateX(20deg);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .puff-wrapper .hidden {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+</style>
 
 
-<div class="scene">
-	
-	
+<div class="puff-wrapper" id="puffWrapper" onclick="toggleSVGs()">
+    <div id="svgA">
+
+        <object data="./assets/svg/nutte.svg" type="image/svg+xml"></object>
+    </div>
+    <div id="svgB" class="hidden">
+
+        <object  data="./assets/svg/nutte-puff.svg" type="image/svg+xml" ></object>
+    </div>
+</div>
+
+<script>
+  const wrapper = document.getElementById('puffWrapper');
+  const svgA = document.getElementById('svgA');
+  const svgB = document.getElementById('svgB');
+  let showingA = true;
+
+
+  function toggleSVGs() {
+    if (showingA) {
+      svgA.classList.add('hidden');
+      svgB.classList.remove('hidden');
+    } else {
+      svgB.classList.add('hidden');
+      svgA.classList.remove('hidden');
+    }
+    showingA = !showingA;
+  }
+</script>
+
+
+
+ <!-- <object data="./assets/svg/nutte-puff.svg" type="image/svg+xml"></object> -->
+
+
+    <object data="./assets/svg/hjaelpfisk.svg" type="image/svg+xml"></object>
+    <object data="./assets/svg/plante.svg" type="image/svg+xml"></object>
+    <object data="./assets/svg/gummistoevle.svg" type="image/svg+xml"></object>
+    <object data="./assets/svg/tang.svg" type="image/svg+xml"></object>
+    <object data="./assets/svg/sea-urchin.svg" type="image/svg+xml"></object>
+    <object data="./assets/svg.svg" type="image/svg+xml"></object>
+
+
+
+<!-- background-image: radial-gradient(red, green, blue); -->
+
+<div class="chat">
+   <img class="speak-bubble" src="./assets/svg/speak-bubble.svg" alt="small speach bubble">
+   <img class="speak-bubble" src="./assets/svg/speak-bubble.svg" alt="small speach bubble">
+   <img class="speak-bubble" src="./assets/svg/speak-bubble.svg" alt="small speach bubble">
+   <img class="speak-bubble" src="./assets/svg/speak-bubble.svg" alt="small speach bubble">
 </div>
 
 <div class="controllers">
@@ -41,19 +128,13 @@
 	</button>
 	<button class="pushable">
 		<span class="front">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house">
-				<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
-				<path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-			</svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
 		</span>
 	</button>
 	<button class="pushable">
 		<span class="front">
 
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo2-icon lucide-undo-2">
-				<path d="M9 14 4 9l5-5" />
-				<path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" />
-			</svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume2-icon lucide-volume-2"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
 		</span>
 	</button>
 
