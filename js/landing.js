@@ -82,7 +82,16 @@ const seaInfo = [
     uniqueThing: "Klovnefisk kan skifte køn, og Dory kan tale hvalsprog 🐋",
     soundSrc: "sounds/klovnefisk.mp3",
     soundLine: "Hej, jeg er Nemo! Og jeg er Dory! … øh, hvad snakkede vi om igen?",
-  }, {
+  },{
+  className: "sea10",
+  animalName: "Dannebrogsreje",
+  age: "~50 mio. år",
+  funFact: "Dannebrogsrejen har røde og hvide striber – ligesom det danske flag! Den hjælper andre fisk ved at rense dem for snavs og parasitter.",
+  uniqueThing: "Er havets frisør 💇‍♂️ – og Danmarks mest patriotiske reje 🇩🇰",
+  soundSrc: "sounds/dannebrogsreje.mp3",
+  soundLine: "Hejsa! Jeg er Dannebrogsrejen – jeg gør fiskene rene og bærer farverne fra Dannebrog med stolthed!",
+},
+ {
     className: "trash1",
     animalName: "Gummistøvle",
     age: "Fundet i havet for nylig",
@@ -109,6 +118,16 @@ const seaInfo = [
     soundSrc: "sounds/plastikpose.mp3",
     soundLine: "Hej, jeg er en plastikpose! Jeg vil meget hellere være genbrugt end flyde i havet!",
   },
+  {
+  className: "trash4",
+  animalName: "Cykel",
+  age: "Mistet for mange år siden",
+  funFact: "Nogle cykler ender i havet, når folk smider dem væk. De ruster langsomt og bliver dækket af tang og snegle!",
+  uniqueThing: "Er blevet et undervandshotel for smådyr 🏨🐚",
+  soundSrc: "sounds/cykel.mp3",
+  soundLine: "Ring ring! Jeg er en glemt cykel på bunden af havet – vil du hjælpe mig tilbage på land?",
+},
+
 ];
 
 // 🐚 Når HTML er klar
