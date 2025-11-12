@@ -41,80 +41,157 @@
   height: 100vh;
   background-size: 100% 100%;
   background-position: center;
-  display: flex;
-  justify-content: center top;
-  align-items: center;
-  background: url("../assets/svg/bg-rev.svg");
+  background: url("../assets/svg/fiskestime.svg");
   background-repeat: repeat-x;
-  animation: animateBg 60s linear infinite;
+  animation: animateBg 120s linear infinite;
 }
 
 .bg img {
   position: absolute;
 }
 
-/* Flytter hele baggrunden en view-port til venstre*/
+/* Flytter hele baggrunden */
 @keyframes animateBg {
   0% {
-    background-position-x: 0;
+    background-position-x: 0vw;
   }
   10% {
-    background-position-x: -100vw;
+    background-position-x: 100vw;
   }
   20% {
-    background-position-x: -100vw;
+    background-position-x: 200vw;
   }
   30% {
-    background-position-x: -100vw;
+    background-position-x: 300vw;
   }
   40% {
-    background-position-x: -100vw;
+    background-position-x: 400vw;
   }
   50% {
-    background-position-x: -100vw;
+    background-position-x: 500vw;
   }
   60% {
-    background-position-x: -100vw;
+    background-position-x: 600vw;
   }
   70% {
-    background-position-x: -100vw;
+    background-position-x: 700vw;
   }
   80% {
-    background-position-x: -100vw;
+    background-position-x: 800vw;
   }
   90% {
-    background-position-x: -100vw;
+    background-position-x: 900vw;
   }
   100% {
-    background-position-x: -100vw;
+    background-position-x: 1000vw;
   }
 }
 
-.bg-rev {
-  z-index: 0;
-  background: cover;
+.bg-rev-v {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 100px;
+}
+
+.bg-rev-h {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: -30px;
 }
 
 .melgr-sand {
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   bottom: -50px;
   right: -30px;
 }
 
 .forgr-rev {
-  z-index: 2;
+  z-index: 3;
   left: -30px;
   bottom: -10px;
 }
 
 .forgr-sand {
-  z-index: 3;
+  z-index: 4;
   bottom: -50px;
 }
 
 .forgr-sten {
+  z-index: 5;
+  right: 10px;
+  bottom: -20px;
+}
+
+/* ---------------------------------------------------------
+  Vandmand
+--------------------------------------------------------- */
+.vandmand {
+  position: absolute;
+  z-index: 10;
+  animation: vandmand 1s infinite;
+}
+
+@keyframes vandmand {
+  from,
+  to {
+    transform: scale(0.5, 0.5);
+  }
+  25% {
+    transform: scale(0.4, 0.6);
+  }
+  50% {
+    transform: scale(0.6, 0.4);
+  }
+  75% {
+    transform: scale(0.4, 0.5);
+  }
+}
+
+/* ---------------------------------------------------------
+ koraller
+--------------------------------------------------------- */
+.koral {
+  position: absolute;
   z-index: 4;
+  animation: koral 3s ease-in-out alternate infinite;
+  bottom: -70px;
+}
+
+.koral2 {
+  position: absolute;
+  z-index: 6;
+  animation: koral 3s ease-in-out alternate infinite;
+  bottom: -150px;
+  right: -70px;
+}
+
+.koral3 {
+  position: absolute;
+  z-index: 4;
+  animation: koral2 3s ease-in-out alternate infinite;
+  bottom: 50px;
+  left: 500px;
+}
+
+@keyframes koral {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* anden størrelse da den er længere bagud*/
+@keyframes koral2 {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(0.4);
+  }
 }
 
 /* ---------------------------------------------------------
@@ -123,54 +200,383 @@
 .fish {
   position: relative;
 }
+
+.fisk {
+  position: absolute;
+  will-change: transform;
+  animation: fisk 10s linear infinite;
+  bottom: 500px;
+  z-index: 2;
+}
+
+@keyframes fisk {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  5% {
+    transform: translateX(0px);
+  }
+
+  10% {
+    transform: translateX(100px);
+  }
+
+  30% {
+    transform: translate(300px, 250px);
+  }
+
+  30% {
+    transform: translate(500px, 100px);
+  }
+
+  100% {
+    transform: translateX(2000px);
+  }
+}
+
+.fisk2 {
+  position: absolute;
+  will-change: transform;
+  animation: fisk2 13s linear infinite;
+  bottom: 600px;
+  z-index: 2;
+}
+
+@keyframes fisk2 {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  5% {
+    transform: translateX(0px);
+  }
+
+  10% {
+    transform: translateX(100px);
+  }
+
+  20% {
+    transform: translate(300px, 200px);
+  }
+
+  100% {
+    transform: translateX(2000px);
+  }
+}
+
+/* ---------------------------------------------------------
+  pudser-fisk
+--------------------------------------------------------- */
+/* variant 1*/
+.fisk-var1 {
+  position: absolute;
+  will-change: transform;
+  animation: fisk-var1 20s linear infinite;
+  bottom: 500px;
+  z-index: 10;
+}
+
+@keyframes fisk-var1 {
+  0% {
+    transform: translateX(2000px) rotateY(180deg);
+  }
+
+  25% {
+    transform: translate(1000px, 100px) rotateY(180deg);
+  }
+
+  50% {
+    transform: translateX(500px) rotateY(180deg);
+  }
+
+  75% {
+    transform: translate(0px, 100px) rotateY(180deg);
+  }
+
+  100% {
+    transform: translateX(-200px) rotateY(180deg);
+  }
+}
+
+/* variant 2*/
+.fisk-var2 {
+  position: absolute;
+  will-change: transform;
+  animation: fisk-var2 18s linear infinite;
+  bottom: 500px;
+  z-index: 10;
+}
+
+@keyframes fisk-var2 {
+  0% {
+    transform: translateX(2000px) rotateY(180deg);
+  }
+
+  25% {
+    transform: translate(1000px, 100px) rotateY(180deg);
+  }
+
+  50% {
+    transform: translateX(500px) rotateY(180deg);
+  }
+
+  75% {
+    transform: translate(50px, 100px) rotateY(180deg);
+  }
+
+  100% {
+    transform: translateX(-200px) rotateY(180deg);
+  }
+}
+
+/* variant 3*/
+.fisk-var3 {
+  position: absolute;
+  will-change: transform;
+  animation: fisk-var3 25s linear infinite;
+  bottom: 500px;
+  z-index: 10;
+}
+
+@keyframes fisk-var3 {
+  0% {
+    transform: translateX(2000px) rotateY(180deg);
+  }
+
+  25% {
+    transform: translate(1000px, 100px) rotateY(180deg);
+  }
+
+  50% {
+    transform: translateX(500px) rotateY(180deg);
+  }
+
+  75% {
+    transform: translate(0px, 100px) rotateY(180deg);
+  }
+
+  100% {
+    transform: translateX(-100px) rotateY(180deg);
+  }
+}
+
+/* ---------------------------------------------------------
+pindesvinfisk
+--------------------------------------------------------- */
 .nutte {
   position: absolute;
   z-index: 10;
-  animation: nutteani 60s infinite;
+  animation: nutteani 20s ease-in-out infinite;
 }
 
 @keyframes nutteani {
   0% {
     top: 10px;
     right: 20px;
+    transform: rotate(90deg);
   }
-  10% {
-  }
+
   20% {
+    top: 200px;
+    right: 400px;
+    transform: rotate(90deg);
   }
-  30% {
-  }
-  40% {
-    top: 50vh;
-    right: 50vw;
-  }
+
   50% {
+    top: 600px;
+    right: 800px;
+    transform: rotate(-90deg);
   }
+
   60% {
+    top: 600px;
+    right: 800px;
+    transform: rotate(-90deg);
   }
-  70% {
-  }
+
   80% {
+    top: 200px;
+    right: 400px;
+    transform: rotate(-120deg);
   }
+
   90% {
+    top: 10px;
+    right: 20px;
+    transform: rotate(-120deg);
   }
+
+  95% {
+    top: 10px;
+    right: 20px;
+    transform: rotate(30deg);
+  }
+
   100% {
-    bottom: 10px;
-    left: 20px;
+    top: 10px;
+    right: 20px;
+    transform: rotate(90deg);
   }
 }
 
-.fisk {
+/* ---------------------------------------------------------
+Tun
+--------------------------------------------------------- */
+.tun {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  will-change: transform;
+  animation: tun 10s infinite;
+  z-index: 0;
+}
+
+@keyframes tun {
+  0% {
+    transform: translateX(2000px);
+  }
+
+  25% {
+    transform: translate(700px, 100px);
+  }
+
+  50% {
+    transform: translateX(500px);
+  }
+
+  75% {
+    transform: translate(0px, 100px);
+  }
+
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+
+/* ---------------------------------------------------------
+nemo/ klovnfisk
+--------------------------------------------------------- */
+/* nemo*/
+
+.nemo {
   position: absolute;
   will-change: transform;
-  animation: fisk 10s linear infinite;
+  animation: nemo 30s infinite;
+  bottom: 100px;
+  left: 30px;
+  z-index: 4;
 }
 
-@keyframes fisk {
+@keyframes nemo {
   0% {
-    transform: translateX(0) rotateY(180deg);
+    transform: translate(1500px, 10px) rotateY(0deg);
   }
+
+  25% {
+    transform: translate(1000px, 100px) rotateY(180deg);
+  }
+
+  35% {
+    transform: translate(1000px, 100px) rotateY(0deg);
+  }
+
+  50% {
+    transform: translate(1500px, 100px) rotateY(180deg);
+  }
+
+  75% {
+    transform: translate(1000px, 10px) rotateY(180deg);
+  }
+
+  80% {
+    transform: translate(1000px, 10px) rotateY(0deg);
+  }
+
   100% {
-    transform: translateX(200px) rotateY(180deg);
+    transform: translate(1500px, 10px) rotateY(180deg);
+  }
+}
+
+/* klovnfisk*/
+
+.klovnfisk {
+  position: absolute;
+  will-change: transform;
+  animation: klovnfisk 30s infinite;
+  bottom: 100px;
+  left: 30px;
+  z-index: 4;
+}
+
+@keyframes klovnfisk {
+  0% {
+    transform: translateX(1000px) rotateY(180deg);
+  }
+
+  25% {
+    transform: translate(1500px, 100px) rotateY(0deg);
+  }
+
+  35% {
+    transform: translate(1500px, 100px) rotateY(180deg);
+  }
+
+  50% {
+    transform: translate(1000px, 100px) rotateY(0deg);
+  }
+
+  75% {
+    transform: translateX(1500px) rotateY(0deg);
+  }
+
+  80% {
+    transform: translateX(1500px) rotateY(180deg);
+  }
+
+  100% {
+    transform: translateX(1000px) rotateY(0deg);
+  }
+}
+
+/* ---------------------------------------------------------
+kirugfisk
+--------------------------------------------------------- */
+.kirugfisk {
+  position: absolute;
+  will-change: transform;
+  animation: kirugfisk 20s infinite;
+  bottom: 400px;
+  left: 30px;
+  z-index: 2;
+}
+
+@keyframes kirugfisk {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  15% {
+    transform: translateX(0px);
+  }
+
+  30% {
+    transform: translateX(100px);
+  }
+
+  60% {
+    transform: translate(300px, 100px);
+  }
+
+  80% {
+    transform: translate(500px, 200px);
+  }
+
+  80% {
+    transform: translate(1000px, 200px);
+  }
+
+  100% {
+    transform: translateX(2000px);
   }
 }
