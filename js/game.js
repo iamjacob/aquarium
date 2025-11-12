@@ -4,10 +4,10 @@
 //Yes, så kører vi, det tager kun 2minutter men du redder nutte!
 
 const trashData = [
-  { img: "./assets/svg/cykelhjul.svg", name: "Cykelhjul", audio:"./assets/audio/fart.mp3"},
-  { img: "./assets/svg/gummistoevle.svg", name: "Gummistøvler", audio:"./assets/audio/fart.mp3"},
-  { img: "./assets/svg/flaske.svg", name: "Glas Flaske", audio:"./assets/audio/fart.mp3"},
-  { img: "./assets/svg/can.svg", name: "Metal dåse", audio:"./assets/audio/fart.mp3"},
+  { img: "./assets/svg/cykelhjul.svg", name: "Cykelhjul", audio:"./assets/audio/cykelhjul.mp3"},
+  { img: "./assets/svg/gummistoevle.svg", name: "Gummistøvler", audio:"./assets/audio/gummistøvle.mp3"},
+  { img: "./assets/svg/flaske.svg", name: "Glas Flaske", audio:"./assets/audio/pantflaske.mp3"},
+  { img: "./assets/svg/can.svg", name: "Metal dåse", audio:"./assets/audio/metalcan.mp3"},
 ];
 
 const itemsContainer = document.querySelector(".items");
@@ -68,6 +68,8 @@ function setupGame() {
 
   console.clear();
   console.log(`🐢 Collect the ${trashData[nextIndex].name} first!`);
+  new Audio(trashData[nextIndex].audio).play()
+  
   createFish();
 }
 
@@ -191,6 +193,8 @@ if (distanceFromTop < 200) targetScroll -= 50;
   const fishRect = fish.getBoundingClientRect();
   if (isColliding(swimmerRect, fishRect)) {
     console.log("🔥 You got roasted by the fish!");
+    //animation nutte prut og svøm opad hvis kommer oppe fra eller 
+    //nedad hvis kommer nede fra.
   }
 
   // --- Pick up ---
