@@ -580,3 +580,72 @@ kirugfisk
     transform: translateX(2000px);
   }
 }
+
+/* Shark */
+
+.shark {
+  position: absolute;
+  top: 200px;
+  left: -140px;
+  z-index: 1;
+  animation: sharkani 25s linear infinite;
+}
+
+@keyframes sharkani {
+  0% {
+    transform: scaleY(-1) translateX(-600px) rotate(195deg);
+  }
+  50% {
+    transform: scaleY(-1) translateX(1200px) rotate(195deg);
+  }
+  100% {
+    transform: scaleY(-1) translateX(2400px) rotate(195deg);
+  }
+}
+
+/* Crab */
+
+.crab{
+  posistion: absolute;
+  top: 710px;
+  left: 250px;
+  z-index: 3;
+  animation: crabani 20s ease-in-out infinite;
+}
+
+@keyframes crabani {
+  0% {
+    transform: translateX(-100px) rotate(0deg);
+  }
+  10% {
+    transform: translateX(200px) rotate(-0deg);
+  }
+  20% {
+    transform: translateX(100px) rotate(10deg);
+  }
+  30% {
+    transform: translateX(200px) rotate(0deg);
+  }
+  40% {
+    transform: translateX(300px) rotate(10deg);
+  }
+  50% {
+    transform: translateX(500px) rotate(10deg);
+  }
+  60% {
+    transform: translateX(700px) rotate(0deg);
+  }
+  70% {
+    transform: translateX(800px) rotate(10deg);
+  }
+  80% {
+    transform: translateX(850px) rotate(10deg);
+  }
+  90% {
+    transform: translateX(9000px) rotate(0deg);
+  }   
+  100% {
+    transform: translateX(2400px) rotate(0deg);
+  }
+}
+
