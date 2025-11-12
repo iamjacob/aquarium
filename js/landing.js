@@ -88,11 +88,26 @@ const seaInfo = [
     className: "dory-slide",
     animalName: "Dory",
     age: "~50 mio. år",
-    funFact: "Klovnefisk lever i søanemoner og bliver ikke brændt af dem. Dory glemmer alt, men er altid glad!",
-    uniqueThing: "Klovnefisk kan skifte køn, og Dory kan tale hvalsprog 🐋",
-    soundSrc: "./assets/audio/jegerenklovnefisk.mp3",
-    soundLine: "Hej, jeg er Nemo! Og jeg er Dory! … øh, hvad snakkede vi om igen?",
-  },{
+    funFact: "Dory glemmer alt, men er altid glad!",
+    uniqueThing: "Dory kan tale hvalsprog 🐋🐟💭",
+    soundSrc: "sounds/dory.mp3",
+    soundLine: "Hej, jeg er Dory! Hvad var det nu, jeg skulle sige? Åh ja - bare svømme, bare svømme, bare svømme!",
+  },
+  {
+    className: "dolphin-slide",
+    animalName: "Delfin",
+    age: "~15 mio. år",
+    funFact: "Delfiner er super smarte og kan genkende sig selv i spejlet!",
+    uniqueThing: "",
+    soundSrc: "sounds/delfin.mp3",
+    soundLine: "Hej, jeg er en delfin! Jeg bruger lyd til at navigere og finde mad i havet!",
+
+  },
+  
+
+
+  
+  {
   className: "dannebrogsreje-slide",
   animalName: "Dannebrogsreje",
   age: "~50 mio. år",

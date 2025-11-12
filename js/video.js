@@ -16,14 +16,21 @@ document.querySelector('.lucide-pause').addEventListener('click', () => {
   document.querySelectorAll('*').forEach(el => el.style.animationPlayState = 'paused');
 });
 
-//fix stop knap!
 document.querySelector('.lucide-stop').addEventListener('click', () => {
-  document.querySelector('.scene').style.animationPlayState = 'unset';
-//   document.querySelector('.scene::after').style.animationPlayState = 'paused';
- // document.querySelector('.scene').classList.add('paused');
+  const scene = document.querySelector('.scene');
+  console.log('running lucideBtn stop');
 
-  console.log('running lucideBtn stop')
-  //document.querySelectorAll('*').forEach(el => setAttribute('animaiton',el.style.animationPlayState));
+  // Fjern animation (nulstil)
+  scene.style.animation = 'none';
+
+  // Tving browseren til at “genindlæse” stilen
+  scene.offsetHeight; // <- vigtigt trick!
+
+  // Tilføj animation igen
+  scene.style.animation = '';
+
+  // Hvis du bruger en klasse til animationen:
+  // scene.classList.remove('running', 'paused');
+  // void scene.offsetWidth; // trigger reflow
+  // scene.classList.add('running');
 });
-
-

@@ -32,6 +32,16 @@ function smoothScroll() {
 }
 smoothScroll();
 
+let hasPlayed = false;
+
+document.body.addEventListener("scroll", () => {
+  if (!hasPlayed && window.scrollY >= 400) {
+    const resetGameAudio = new Audio('../assets/audio/sharkdanger.mp3');
+    resetGameAudio.play();
+    hasPlayed = true;
+  }
+});
+
 
 // --- Setup game ---
 function setupGame() {
@@ -120,11 +130,18 @@ function deliverTrash(trash, index) {
     console.log(`✅ Delivered the ${trashData[index].name} correctly!`);
     nextIndex++;
     if (nextIndex < trashData.length) {
-      console.log('yoyo')
       console.log(`👉 Next: collect the ${trashData[nextIndex].name}`);
-      new Audio(trashData[nextIndex].audio).play()
+      const findNextAudio = new Audio(trashData[nextIndex].audio);
+      findNextAudio.play()
     } else {
+      const gameDoneAudio = new Audio('../assets/audio/spilgennemfoert.mp3');
+      gameDoneAudio.play()
+
+      const resetGameAudio = new Audio('../assets/audio/spilleigen.mp3');
+      resetGameAudio.play()
       finishGame();
+
+
     }
   } else {
     console.log(`❌ Wrong item! That was the ${trashData[index].name}, you should deliver the ${trashData[nextIndex].name}!`);
