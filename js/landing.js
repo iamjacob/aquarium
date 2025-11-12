@@ -8,7 +8,7 @@ const seaInfo = [
     age: "~1 milliard år",
     funFact: "Vandmænd er nogle af de ældste dyr på Jorden! De har ingen hjerne eller hjerte – kun vand og gelé.",
     uniqueThing: "Kan lyse i mørket som et undervands-spøgelse 👻",
-    soundSrc: "sounds/jegervandmand.mp3",
+    soundSrc: "./assets/audio/jegervandmand.mp3",
     image:"./assets/svg/hjaelpfisk.svg",
     soundLine: "Heeej, jeg er en vandmand! Jeg danser som gelé gennem havet og kan lyse i mørket!",
   },
@@ -18,7 +18,7 @@ const seaInfo = [
     age: "~600 mio. år",
     funFact: "Koraller og svampe var nogle af de første til at bygge undervandsbyer for fisk og smådyr.",
     uniqueThing: "Er havets arkitekter 🏗️ – de bygger hele koralbyer!",
-    soundSrc: "sounds/koraller.mp3",
+    soundSrc: "./assets/audio/koraller.mp3",
     soundLine: "Velkommen til min koralby! Jeg bygger hjem til alle havets dyr!",
   },
   {
@@ -27,7 +27,7 @@ const seaInfo = [
     age: "~540 mio. år",
     funFact: "Søanemonen ligner en blomst, men den er faktisk et rovdyr med fangarme, der fanger små fisk!",
     uniqueThing: "Har usynlige superklæbrige arme 🦸‍♀️",
-    soundSrc: "sounds/jegerensoeanemone.mp3",
+    soundSrc: "./assets/audio/jegerensoeanemone.mp3",
     soundLine: "Se mine seje arme! De er usynlige – og superklæbrige!",
   },
   {
@@ -36,7 +36,7 @@ const seaInfo = [
     age: "~450 mio. år",
     funFact: "Hajer har eksisteret længere end dinosaurerne og har et super-skarpt sanseapparat!",
     uniqueThing: "Kan lugte én dråbe blod i et helt svømmebassin 🩸",
-    soundSrc: "sounds/jegerenhaj.mp3",
+    soundSrc: "./assets/audio/jegerenhaj.mp3",
     soundLine: "Jeg er hajen! Havets superhelt – jeg kan lugte alt og svømmer som lynet!",
   },
   {
@@ -45,7 +45,7 @@ const seaInfo = [
     age: "~200 mio. år",
     funFact: "Krabber går sidelæns, men de er lynhurtige, når de ser mad – eller farer!",
     uniqueThing: "Er mester i at breakdance 🕺 (sidelæns!)",
-    soundSrc: "sounds/jegerenkrabbe.mp3",
+    soundSrc: "./assets/audio/jegerenkrabbe.mp3",
     soundLine: "Klik klik! Jeg går sidelæns som en dansemaskine – pas på mine klør!",
   },
   {
@@ -54,7 +54,7 @@ const seaInfo = [
     age: "~150 mio. år",
     funFact: "De første fisk, der lignede moderne fisk – de fik finner, skæl og begyndte at svømme hurtigt!",
     uniqueThing: "Havets oldefar med turbo-finner 🧓💨",
-    soundSrc: "sounds/jegerenurfisk.mp3",
+    soundSrc: "./assets/audio/jegerenurfisk.mp3",
     soundLine: "Jeg er urfisken! Den første med turbo-finner – uden mig, ingen Nemo!",
   },
   {
@@ -63,7 +63,7 @@ const seaInfo = [
     age: "~80 mio. år",
     funFact: "Når den bliver bange, puster den sig op som en ballon fuld af pigge!",
     uniqueThing: "Kan blive dobbelt så stor på ét sekund 🎈",
-    soundSrc: "sounds/jegerenpindsvinefisk.mp3",
+    soundSrc: "./assets/audio/jegerenpindsvinefisk.mp3",
     soundLine: "Pffffft! Jeg puster mig op som en ballon – ingen tør røre mig!",
   },
   {
@@ -72,7 +72,7 @@ const seaInfo = [
     age: "~50 mio. år",
     funFact: "Tunen er havets fartdjævel! Den kan svømme hurtigere end en bil i byen!",
     uniqueThing: "Kan slå delfiner i kapløb 🏁",
-    soundSrc: "sounds/jegerentun.mp3",
+    soundSrc: "./assets/audio/jegerentun.mp3",
     soundLine: "Wrooom! Jeg er tunfisken – havets raket! Ingen fanger mig!",
   },
   {
@@ -81,7 +81,7 @@ const seaInfo = [
     age: "~50 mio. år",
     funFact: "Klovnefisk lever i søanemoner og bliver ikke brændt af dem. Dory glemmer alt, men er altid glad!",
     uniqueThing: "Klovnefisk kan skifte køn, og Dory kan tale hvalsprog 🐋",
-    soundSrc: "sounds/jegerenklovnefisk.mp3",
+    soundSrc: "./assets/audio/jegerenklovnefisk.mp3",
     soundLine: "Hej, jeg er Nemo! Og jeg er Dory! … øh, hvad snakkede vi om igen?",
   },{
   className: "dannebrogsreje-slide",
@@ -89,7 +89,7 @@ const seaInfo = [
   age: "~50 mio. år",
   funFact: "Dannebrogsrejen har røde og hvide striber – ligesom det danske flag! Den hjælper andre fisk ved at rense dem for snavs og parasitter.",
   uniqueThing: "Er havets frisør 💇‍♂️ – og Danmarks mest patriotiske reje 🇩🇰",
-  soundSrc: "sounds/jegerenreje.mp3",
+  soundSrc: "./assets/audio/jegerenreje.mp3",
   soundLine: "Hejsa! Jeg er Dannebrogsrejen – jeg gør fiskene rene og bærer farverne fra Dannebrog med stolthed!",
 },
  {
@@ -98,7 +98,7 @@ const seaInfo = [
     age: "Fundet i havet for nylig",
     funFact: "En glemt gummistøvle kan flyde rundt i havet i mange år. Nogle fisk prøver endda at gemme sig i den!",
     uniqueThing: "Kan bruges som mini-hus for en krabbe 🏠",
-    soundSrc: "sounds/gummistoevle.mp3",
+    soundSrc: "./assets/audio/gummistoevle.mp3",
     soundLine: "Ups! Jeg burde være på land – hjælp mig tilbage, før jeg bliver et krabbehjem!",
   },
   {
@@ -107,7 +107,7 @@ const seaInfo = [
     age: "Flyder i havet i op til 200 år!",
     funFact: "Aluminium kan genbruges uendeligt mange gange, men i havet gør den skade på dyr og koraller.",
     uniqueThing: "Kan forvandles til en cykel, hvis den bliver genbrugt 🚴‍♂️",
-    soundSrc: "sounds/daase.mp3",
+    soundSrc: "./assets/audio/daase.mp3",
     soundLine: "Jeg er en sodavandsdåse – genbrug mig, så jeg kan blive til noget nyt og fedt!",
   },
   {
@@ -116,7 +116,7 @@ const seaInfo = [
   age: "Mistet for mange år siden",
   funFact: "Nogle cykler ender i havet, når folk smider dem væk. De ruster langsomt og bliver dækket af tang og snegle!",
   uniqueThing: "Er blevet et undervandshotel for smådyr 🏨🐚",
-  soundSrc: "sounds/cykel.mp3",
+  soundSrc: "./assets/audio/cykel.mp3",
   soundLine: "Ring ring! Jeg er en glemt cykel på bunden af havet – vil du hjælpe mig tilbage på land?",
 },
 
@@ -134,9 +134,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+
+      const intro = new Audio('')
+      intro.play()
+
+
   // 🎣 Tilføj tooltip + lyd på hover / click
   seaInfo.forEach((sea) => {
     //const sound = new Audio(sea.soundSrc);
+      const sound = new Audio(sea.soundSrc)
+      sound.pause()
 
     document.querySelectorAll("." + sea.className).forEach((elem) => {
       // Tooltip på hover
@@ -147,15 +154,16 @@ document.addEventListener("DOMContentLoaded", () => {
           Alder: ${sea.age}<br>
           Sjov fakta: ${sea.funFact}<br>
           Superkraft: ${sea.uniqueThing}
+
         `;
         showTooltip(html);
+        sound.play();
       });
 
-    //   // Lyd på click
-    //   elem.addEventListener("click", () => {
-    //     sound.play();
-    //     showTooltip(`<em>${sea.soundLine}</em>`);
-    //   });
+      // Lyd på click
+      // elem.addEventListener("click", () => {
+        // showTooltip(`<em>${sea.soundLine}</em>`);
+      // });
     });
   });
 });
