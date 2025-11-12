@@ -92,7 +92,17 @@ const seaInfo = [
     uniqueThing: "Dory kan tale hvalsprog 🐋🐟💭",
     soundSrc: "sounds/dory.mp3",
     soundLine: "Hej, jeg er Dory! Hvad var det nu, jeg skulle sige? Åh ja - bare svømme, bare svømme, bare svømme!",
-  }
+  },
+  {
+    className: "dolphin-slide",
+    animalName: "Delfin",
+    age: "~15 mio. år",
+    funFact: "Delfiner er super smarte og kan genkende sig selv i spejlet!",
+    uniqueThing: "",
+    soundSrc: "sounds/delfin.mp3",
+    soundLine: "Hej, jeg er en delfin! Jeg bruger lyd til at navigere og finde mad i havet!",
+
+  },
   
 
 
