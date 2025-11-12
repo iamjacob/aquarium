@@ -179,7 +179,7 @@ document.body.onpointermove = (event) => {
   if (finished) return;
 
   const { pageX, pageY, clientY } = event;
-  swimmer.style.transform = `translate(${pageX}px, ${pageY}px)`;
+ swimmer.style.transform = `translate(${pageX}px, ${pageY}px)`;
   swimmer.style.zIndex = "20";
 
   const distanceFromBottom = window.innerHeight - clientY;
