@@ -4,10 +4,10 @@
 //Yes, så kører vi, det tager kun 2minutter men du redder nutte!
 
 const trashData = [
-  { img: "./assets/svg/cykelhjul.svg", name: "Cykelhjul", audio:"./assets/audio/cykelhjul.mp3"},
-  { img: "./assets/svg/gummistoevle.svg", name: "Gummistøvler", audio:"./assets/audio/gummistøvle.mp3"},
-  { img: "./assets/svg/flaske.svg", name: "Glas Flaske", audio:"./assets/audio/pantflaske.mp3"},
-  { img: "./assets/svg/can.svg", name: "Metal dåse", audio:"./assets/audio/metalcan.mp3"},
+  { img: "./assets/svg/cykelhjul.svg", name: "Cykelhjul", audio:"../assets/audio/findcykelhjulet.mp3"},
+  { img: "./assets/svg/gummistoevle.svg", name: "Gummistøvler", audio:"./assets/audio/findgummistoevle.mp3"},
+  { img: "./assets/svg/flaske.svg", name: "Glas Flaske", audio:"./assets/audio/findpantflaske.mp3"},
+  { img: "./assets/svg/can.svg", name: "Metal dåse", audio:"./assets/audio/findmetalcan.mp3"},
 ];
 
 const itemsContainer = document.querySelector(".items");
@@ -35,7 +35,7 @@ smoothScroll();
 
 // --- Setup game ---
 function setupGame() {
-  itemsContainer.innerHTML += "";
+  itemsContainer.innerHTML = "";
   document.querySelectorAll(".trash, .finish-message, .fish").forEach((el) => el.remove());
 
   carrying = null;
@@ -69,9 +69,12 @@ function setupGame() {
 
   console.clear();
   console.log(`🐢 Collect the ${trashData[nextIndex].name} first!`);
-  new Audio(trashData[nextIndex].audio).play()
+  const sound = new Audio(trashData[nextIndex].audio)
+  sound.play()
+  
   
   createFish();
+  
 }
 
 // --- Create fixed fish (danger!) ---
@@ -230,5 +233,7 @@ if (distanceFromTop < 200) targetScroll -= 50;
   }
 };
 
-// --- Start the game ---
-setupGame();
+
+
+// Wait for user to interact before starting the game
+document.body.addEventListener('pointermove', setupGame,{ once: true });
