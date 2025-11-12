@@ -198,13 +198,13 @@ body {
   53% {transform:rotate(5%)}
   54% {transform:rotate(-5%)}
   55% {transform:rotate(5%)}
-  90%  { opacity: 1; transform: translateY(29vh)     scale(3); }
+  90%  { opacity: 1; transform: translateY(29vh) scale(3); }
   100% { opacity: 0; transform: translateY(-10px) scale(3); }
 }
 
 @keyframes appearHaj {
   0%   { opacity: 0; transform: translateZ(1000px) scale(0.1); }
-  5%   { opacity: 1; transform: translateX(45vh)     scale(1); }
-  90%  { opacity: 1; transform: translateY(0)     scale(2.2); }
+  5%   { opacity: 1; transform: translateX(45vh) scale(1); }
+  90%  { opacity: 1; transform: translateY(0) scale(2.2); }
   100% { opacity: 1; transform: translateY(0) scale(3.5); }
 }

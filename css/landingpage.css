@@ -110,7 +110,7 @@ body {
 .options{
     position: absolute;
     z-index: 100;
-    bottom: 90px;
+    bottom: 150px;
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -180,15 +180,17 @@ body {
 
 
 .infinite-slider {
-  width: 100vw;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  /* background: linear-gradient(270deg, #009dff, #0066ff); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
+width: 100vw;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    position: fixed;
+    bottom: 70px;
+  
 }
 
 .slide-track {
@@ -229,28 +231,62 @@ body {
 /* Swap animations */
 .swapped-right {
   /* transform: translateX(700px); */
-   transform: translate(-50%, -50%); 
+   /* transform: translate(-50%, -50%);  */
+    transform: translateX(50vw);
+
     position: absolute;
-  top: 50%;
-  left: 30%;
+  /* top: 50%; */
+  /* left: 30%; */
+    z-index: 100;
+
 }
 
 .swapped-left {
-  /* transform: translateX(-700px); */
-  transform: translate(-50%, -50%);
+   transform: translateX(20vw);
     position: absolute;
-    top: 50%;
-    left: 60%;
+    z-index: 100;
 }
 
-/* .nutte{
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  }
-  
-  .vandmand{
+.vandmand {
+    transform: translateX(50vw);
     position: absolute;
-    top: 50%;
-    left: 60%;
-} */
+    z-index: 100;
+
+  }
+
+  .nutte {
+   transform: translateX(20vw);
+
+  /* transform: translate(-50%, -50%); */
+    position: absolute;
+    /* top: 50%; */
+    /* left: 60%; */
+    z-index: 100;
+}
+
+
+#nutte, #vandmand{
+transition: ease all .2s;
+}
+
+.responsive {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .responsive {
+    width: 40%;
+    max-width: 180px;
+    height: auto;
+  }
+
+  .options{
+    gap: 30px;
+}
+
+  .options a {
+    transform: scale(1);
+  }
+}

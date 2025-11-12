@@ -81,7 +81,7 @@ function createFish() {
   fish.style.left = "10vw";
   document.body.appendChild(fish);
 
-	/*
+	
   let direction = 1;
   setInterval(() => {
     if (finished) return;
@@ -89,7 +89,7 @@ function createFish() {
     if (left > window.innerWidth - 80) direction = -1;
     if (left < 0) direction = 1;
     fish.style.left = left + direction * 2 + "px";
-  }, 30);*/
+  }, 30);
 }
 
 // --- Collision detection ---

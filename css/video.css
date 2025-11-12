@@ -3,6 +3,8 @@
    - px: billedstørrelser, offsets
    - farver + font
 --------------------------------------------------------- */
+@import url("./controllers.css");
+
 :root {
   /* Farver */
   --ocean-top: #a2bfeb;

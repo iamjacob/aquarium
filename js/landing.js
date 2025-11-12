@@ -170,16 +170,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const nutte = document.querySelector('.nutte')
-const vandmand = document.querySelector('.vandmand')
+const nutte = document.getElementById('nutte')
+const vandmand = document.getElementById('vandmand')
 
 //const soundIroh = new Audio("./../sound/hot-leaf-juice.mp3");
 
 //const soundZuko = new Audio("./../sound/thats-rough-buddy.mp3");
 
 function swapImages() {
-  vandmand.classList.toggle("swapped-right");
-  nutte.classList.toggle("swapped-left");
+  nutte.classList.toggle("nutte");
+  nutte.classList.toggle("swapped-right");
+  vandmand.classList.toggle("vandmand");
+  vandmand.classList.toggle("swapped-left");
 }
 
 if (nutte) {
