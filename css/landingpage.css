@@ -284,6 +284,7 @@ transition: ease all .2s;
 
   .options{
     gap: 30px;
+    bottom:16px;
 }
 
   .options a {
