@@ -434,23 +434,23 @@ Tun
 
 @keyframes tun {
   0% {
-    transform: translateX(2000px);
+    transform: scale(0.5) translateX(2000px);
   }
 
   25% {
-    transform: translate(700px, 100px);
+    transform: scale(0.5) translate(700px, 100px);
   }
 
   50% {
-    transform: translateX(500px);
+    transform: scale(0.5) translateX(500px);
   }
 
   75% {
-    transform: translate(0px, 100px);
+    transform: scale(0.5) translate(0px, 100px);
   }
 
   100% {
-    transform: translateX(-2000px);
+    transform: scale(0.5) translateX(-2800px);
   }
 }
 
