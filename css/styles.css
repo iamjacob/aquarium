@@ -1,5 +1,11 @@
 @import url("./controllers.css");
 
+/* layout variables - tweak these to lift sand/sten up or down */
+:root {
+  --sten-lift: -250px; /* move stones up 18px by default */
+  --sand-lift: -247px; /* move sand up 12px by default */
+}
+
 html, body{
   margin:0;
 	height: fit-content;
@@ -188,6 +194,31 @@ html, body{
     right: 0;
   }
 }
+
+.sten {
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  display: block;
+  transform: translateY(var(--sten-lift)); 
+}
+
+.sand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  display: block;
+  z-index: 1; /* keep sand underneath items */
+  transform: translateY(var(--sand-lift));
+  pointer-events: none; /* clicks should reach items */
+}
+
 
 
 
