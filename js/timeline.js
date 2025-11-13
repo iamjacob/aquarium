@@ -16,14 +16,7 @@ document.querySelector('.lucide-pause').addEventListener('click', () => {
   document.querySelectorAll('*').forEach(el => el.style.animationPlayState = 'paused');
 });
 
-//fix stop knap!
 document.querySelector('.lucide-stop').addEventListener('click', () => {
-  document.querySelector('.scene').style.animationPlayState = 'unset';
-//   document.querySelector('.scene::after').style.animationPlayState = 'paused';
- // document.querySelector('.scene').classList.add('paused');
-
-  console.log('running lucideBtn stop')
-  //document.querySelectorAll('*').forEach(el => setAttribute('animaiton',el.style.animationPlayState));
+  navigator.reload()
 });
-
 

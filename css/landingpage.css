@@ -15,36 +15,25 @@ body{
 body {
   margin: 0;
   height: 100vh;
-  background: radial-gradient(circle at 20% 20%, #00d4ff, #0061ff, #2400ff);
-  background-size: 200% 200%;
-  animation: waterFlow 10s ease-in-out infinite alternate;
+  /*background: radial-gradient(circle at 20% 20%, #00d4ff, #0061ff, #2400ff);*/
+  background-size: 100% 100%;
   overflow: hidden;
+  background: radial-gradient( blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue,blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue,blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue,blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue);
+  /*background: radial-gradient(circle at 0% 0%, #00d4ff, #0061ff, #2400ff);*/
 }
 
+/*animation: waterFlow 5s ease-in infinite;*/
 
 /* smooth glowing motion */
-@keyframes waterFlow {
+/* transform: s(0.); */
+/* @keyframes waterFlow {
   0% {
-    background-position: 0% 0%;
-    background: radial-gradient(circle at 0% 0%, #00d4ff, #0061ff, #2400ff);
-  }
-  25% {
-    background-position: 0% 0%;
-    background: radial-gradient(circle at 0% 0%, #00a8ff, #006eff, #2400ff);
-  }
-  50% {
-    background-position: 0% 0%;
-    background: radial-gradient(circle at 0% 0%, #00ffea, #0091ff, #3700ff);
-  }
-  75% {
-    background-position: 0% 0%;
-    background: radial-gradient(circle at 0% 0%, #00f6ff, #0077ff, #2500ff);
+
   }
   100% {
-    background-position: 0% 0%;
-    background: radial-gradient(circle at 0% 0%, #00d4ff, #0061ff, #2400ff);
+    
   }
-}
+} */
 
 
 .speak-bubble {
@@ -139,7 +128,15 @@ body {
 .speak-bubble{
     animation: ;
 }
-    */
+*/
+
+.landing{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+  
 .landing h1, .landing p{
   font-family: "Londrina Solid", sans-serif;
   text-align:center;
@@ -188,13 +185,19 @@ width: 100vw;
     align-items: center;
     justify-content: center;
     padding: 2rem 0;
-    position: fixed;
-    bottom: 70px;
+    /* position: fixed;
+    bottom: 70px; */
   
+}
+.mainCharacterHolder{
+      position: relative;
+    width: 100vw;
+    height: 50vh;
 }
 
 .slide-track {
   display: flex;
+  height: 140px;
   animation: scroll 20s linear infinite;
 }
 
@@ -284,6 +287,7 @@ transition: ease all .2s;
 
   .options{
     gap: 30px;
+    bottom:16px;
 }
 
   .options a {

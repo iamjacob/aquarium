@@ -204,6 +204,7 @@
 }
 
 .fisk {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: fisk 10s linear infinite;
@@ -238,6 +239,7 @@
 }
 
 .fisk2 {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: fisk2 13s linear infinite;
@@ -272,6 +274,7 @@
 --------------------------------------------------------- */
 /* variant 1*/
 .fisk-var1 {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: fisk-var1 20s linear infinite;
@@ -303,6 +306,7 @@
 
 /* variant 2*/
 .fisk-var2 {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: fisk-var2 18s linear infinite;
@@ -334,6 +338,7 @@
 
 /* variant 3*/
 .fisk-var3 {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: fisk-var3 25s linear infinite;
@@ -366,10 +371,33 @@
 /* ---------------------------------------------------------
 pindesvinfisk
 --------------------------------------------------------- */
-.nutte {
+/*standard*/
+
+.nutte-prutte .nutte {
+  cursor: pointer;
   position: absolute;
   z-index: 10;
+  opacity: 1;
+  transition: 0.3s ease;
   animation: nutteani 20s ease-in-out infinite;
+}
+
+.nutte-prutte .nutte-bange {
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  transition: 0.3s ease;
+  animation: nutteani 20s ease-in-out infinite;
+}
+
+/* Aktiv tilstand - normal fisk skjult, bange fisk synlig */
+.nutte-prutte.active .nutte {
+  opacity: 0;
+}
+
+.nutte-prutte.active .nutte-bange {
+  opacity: 1;
 }
 
 @keyframes nutteani {
@@ -426,6 +454,7 @@ pindesvinfisk
 Tun
 --------------------------------------------------------- */
 .tun {
+  cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -462,6 +491,7 @@ nemo/ klovnfisk
 /* nemo*/
 
 .nemo {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: nemo 30s infinite;
@@ -503,6 +533,7 @@ nemo/ klovnfisk
 /* klovnfisk*/
 
 .klovnfisk {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: klovnfisk 30s infinite;
@@ -545,6 +576,7 @@ nemo/ klovnfisk
 kirugfisk
 --------------------------------------------------------- */
 .kirugfisk {
+  cursor: pointer;
   position: absolute;
   will-change: transform;
   animation: kirugfisk 20s infinite;
@@ -590,6 +622,7 @@ kirugfisk
   top: 200px;
   left: -140px;
   z-index: 1;
+  pointer-events: bounding-box;
   animation: sharkani 25s linear infinite;
 }
 
@@ -607,9 +640,10 @@ kirugfisk
 
 /* Crab */
 
-.crab{
+.crab {
+  cursor: pointer;
   position: absolute;
-  top: 740px;
+  top: 800px;
   left: 250px;
   z-index: 3;
   animation: crabani 20s ease-in-out infinite;
@@ -645,7 +679,7 @@ kirugfisk
   }
   90% {
     transform: translateX(9000px) rotate(0deg);
-  }   
+  }
   100% {
     transform: translateX(2400px) rotate(0deg);
   }
@@ -653,7 +687,7 @@ kirugfisk
 
 /* Sea Urchin */
 
-.sea-urchin{
+.sea-urchin {
   position: absolute;
   top: 350px;
   left: 175px;
@@ -673,7 +707,7 @@ kirugfisk
   }
 }
 
-.sea-urchin-2{
+.sea-urchin-2 {
   position: absolute;
   top: 250px;
   left: 275px;
@@ -693,13 +727,13 @@ kirugfisk
   }
 }
 
-.sea-urchin-3{
+.sea-urchin-3 {
   position: absolute;
   top: 465px;
   left: 270px;
   z-index: 3;
   animation: seaurchinani3 18s ease-in-out infinite;
-} 
+}
 
 @keyframes seaurchinani3 {
   0% {
@@ -741,7 +775,7 @@ kirugfisk
   left: 700px;
   z-index: 4;
   animation: tang2ani 13s ease-in-out infinite;
-}   
+}
 
 @keyframes tang2ani {
   0% {
@@ -754,3 +788,7 @@ kirugfisk
     transform: scale(0.5) rotate(0deg);
   }
 }
+
+/* ---------------------------------------------------------
+forsøger at gøre det nemmere at klikke på fiskene
+--------------------------------------------------------- */
