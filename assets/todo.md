@@ -4,7 +4,7 @@ Send alle screenshots til ai og bed den om at "cook so it taste even better!" (A
 # frede .. en nice ting.
 Du har ikke hært om det, men super simpelt. "Manifest". Behøver jeg sige mere? søg på manifest file pwa eks. vi skal binde/route/connecte de her billeder til iconer, som ligger i assets/icons/!*
 
-# lærke animation med delfiner som springer.
+#✅ lærke animation med delfiner som springer.
 igen keyframes. tænker 2s eller 1'+ hvor de springer hvor mange gange og bevæger de sige og der skal være til noget man klikker på forsiden på det tomme illussions hav kommer der delfiner. der hopper hurtigt det med at få det til at virke med setTimeout(()=>toggle.class,2000)
 
 
