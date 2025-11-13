@@ -1,45 +1,35 @@
 @import url("./controllers.css");
+@import url("./delfiner.css");
 
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Londrina+Solid:wght@100;300;400;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-h1{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 3rem;
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
 }
 
-body{
-    background-image: radial-gradient(red, green, blue);
+body {
+  background-image: radial-gradient(red, green, blue);
 }
 
 body {
   margin: 0;
-  height: 100vh;
-  /*background: radial-gradient(circle at 20% 20%, #00d4ff, #0061ff, #2400ff);*/
+  min-height: 100vh;
+  min-width: 100vw;
   background-size: 100% 100%;
   overflow: hidden;
-  background: radial-gradient( blue, lightblue, blue, lightblue, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff,blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff,blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff,blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff);
-  /*background: radial-gradient(circle at 0% 0%, #00d4ff, #0061ff, #2400ff);*/
+  background: radial-gradient(blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff);
   background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-
-
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/*animation: waterFlow 5s ease-in infinite;*/
+.mainCharacterHolder{
+    height: 75vh;
+    width: 100vw;
 
-/* smooth glowing motion */
-/* transform: s(0.); */
-/* @keyframes waterFlow {
-  0% {
-
-  }
-  100% {
-    
-  }
-} */
-
+}
 
 .speak-bubble {
   display: inline-block;
@@ -48,24 +38,44 @@ background-repeat: no-repeat;
 }
 
 /* Different bubbles start at slightly different times */
-.speak-bubble:nth-child(1) { animation-delay: 0s; transform: scale(.5); }
-.speak-bubble:nth-child(2) { animation-delay: 0.2s; transform: scale(.7);}
-.speak-bubble:nth-child(3) { animation-delay: 0.4s; transform: scale(.8);}
-.speak-bubble:nth-child(4) { animation-delay: 0.6s; transform: scale(5);}
+.speak-bubble:nth-child(1) {
+  animation-delay: 0s;
+  transform: scale(.5);
+}
+
+.speak-bubble:nth-child(2) {
+  animation-delay: 0.2s;
+  transform: scale(.7);
+}
+
+.speak-bubble:nth-child(3) {
+  animation-delay: 0.4s;
+  transform: scale(.8);
+}
+
+.speak-bubble:nth-child(4) {
+  animation-delay: 0.6s;
+  transform: scale(5);
+}
 
 @keyframes talk {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(0);
     opacity: 1;
   }
+
   25% {
     transform: scale(1.08);
     opacity: 0.95;
   }
+
   50% {
     transform: scale(0.95);
     opacity: 1;
   }
+
   75% {
     transform: scale(1.05);
   }
@@ -101,31 +111,32 @@ background-repeat: no-repeat;
 }
 
 
-.options{
-    position: absolute;
-    z-index: 100;
-    bottom: 150px;
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height:80px;
-    align-items: end;
-    pointer-events: none;
+.options {
+  position: absolute;
+  z-index: 100;
+  bottom: 150px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  gap:60px;
+  height: 80px;
+  align-items: end;
+  pointer-events: none;
 }
 
-.options a{
-    transform: scale(1);
-    transition: ease .2s all;
-    pointer-events: auto;
+.options a {
+  transform: scale(1);
+  transition: ease .2s all;
+  pointer-events: auto;
 
 }
 
-.options a:hover{
-    transform: scale(1.1);
+.options a:hover {
+  transform: scale(1.1);
 }
 
-.options a:hover ~ .nutte{
-    transform: scale(1.1);
+.options a:hover~.nutte {
+  transform: scale(1.1);
 }
 
 /*
@@ -134,23 +145,22 @@ background-repeat: no-repeat;
 }
 */
 
-.landing{
+.landing {
   display: flex;
   justify-content: unset;
   align-items: center;
   flex-direction: column;
-
-
-    display: flex;
-    height: calc(100vh - 80px);
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  height: calc(100vh - 80px);
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
-.landing h1, .landing p{
+.landing h1,
+.landing p {
   font-family: "Londrina Solid", sans-serif;
-  text-align:center;
+  text-align: center;
   font-size: 32px;
 }
 
@@ -162,131 +172,52 @@ background-repeat: no-repeat;
 
 /* Keyframes for mild floating animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .character {
   animation: float 4s ease-in-out infinite;
 }
 
-
-/* Ekstra “shine” effekt, hvis du vil bruge det */
 .landing object:hover {
-  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.3))
-          brightness(1.05)
-          saturate(1.1);
-  /* transform: translateY(-4px) scale(1.03); */
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.3)) brightness(1.05) saturate(1.1);
 }
-
-
-
-/* .sea1, .sea2, .trash1,.trash2,.trash4, .sea10
-{
-    transform: scale(0.5) !important;
-} */
-
-/*denne her miriam*/
-.infinite-slider {
-    width: 100vw;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0;
-    /* position: fixed;
-    bottom: 70px; */
-  
-}
-.mainCharacterHolder{
-      position: relative;
-    width: 100vw;
-    height: 50vh;
-}
-
-.slide-track {
-  display: flex;
-  height: 140px;
-  animation: scroll 20s linear infinite;
-}
-
-.infinite-slider object {
-  pointer-events: auto !important;
-}
-
-
-.slide-track object {
-  width: 120px;
-  height: 120px;
-  margin: 0 2rem;
-  pointer-events: none;
-  opacity: 0.9;
-  transform: scale(1);
-  transition: transform 0.3s ease;
-}
-
-.slide-track object:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
-
-
-/*duuh  hertil cut*/
-
-
 
 
 /* Swap animations */
 .swapped-right {
-  /* transform: translateX(700px); */
-   /* transform: translate(-50%, -50%);  */
-    transform: translateX(50vw);
-
-    position: absolute;
-  /* top: 50%; */
-  /* left: 30%; */
-    z-index: 100;
-
+  transform: translateX(50vw);
+  position: absolute;
+  z-index: 100;
 }
 
 .swapped-left {
-   transform: translateX(20vw);
-   position: absolute;
-   z-index: 100;
+  transform: translateX(20vw);
+  position: absolute;
+  z-index: 100;
 }
 
 .vandmand {
-    transform: translateX(50vw);
-    position: absolute;
-    z-index: 100;
+  transform: translateX(50vw);
+  position: absolute;
+  z-index: 100;
 }
 
-
-  .nutte {
-   transform: translateX(20vw);
-   /* transform: translate(-50%, -50%); */
-   position: absolute;
-   /* top: 50%; */
-   /* left: 60%; */
-   z-index: 100;
+.nutte {
+  transform: translateX(20vw);
+  position: absolute;
+  z-index: 100;
 }
 
-
-#nutte, #vandmand{
-transition: ease all .2s;
+#nutte,
+#vandmand {
+  transition: ease all .2s;
 }
 
 .responsive {
@@ -302,20 +233,20 @@ transition: ease all .2s;
     height: auto;
   }
 
-  .options{
+  .options {
     gap: 4px;
     /* bottom:16px; */
-}
+  }
 
   .options a {
     transform: scale(1);
   }
 
-  .landing h1{
-    font-size:18px;
-  }
-  .landing p{
-    font-size: 16px;
+  .landing h1 {
+    font-size: 18px;
   }
 
+  .landing p {
+    font-size: 16px;
+  }
 }

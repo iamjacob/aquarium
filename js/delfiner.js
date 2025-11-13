@@ -11,6 +11,7 @@ clickArea.addEventListener('click', (e) => {
     
  // Beregner X-positionen for klik i forhold til clickArea ved at trække left-værdien fra clientX
     const x = e.clientX - rect.left; 
+    const y = e.clientX
     
  // Vælger et tilfældigt antal delfiner mellem 2 og 3 - Math.random() * 2 giver et tal mellem 0 og 2, og Math.floor runder ned til nærmeste heltal, så +2 sikrer mindst 2 delfiner
     const dolphinCount = Math.floor(Math.random() * 2) + 2;
@@ -21,14 +22,14 @@ clickArea.addEventListener('click', (e) => {
         
  //// Kalder funktionen createDolphin med X-positionen for klik og bredden af clickArea. Hver kald er forsinket med i*200 millisekunder, så delfinerne ikke dukker op præcis samtidig.
         setTimeout(() => {
-            createDolphin(x, rect.width); 
+            createDolphin(x,y, rect.width); 
         }, i * 200); 
     }
 });
 
 
  // Funktion der opretter og animerer en delfin
-function createDolphin(x, areaWidth) { 
+function createDolphin(x,y, areaWidth) { 
    
  // Opretter et nyt <img> element til delfinen
     const dolphin = document.createElement('img'); 
@@ -40,6 +41,7 @@ function createDolphin(x, areaWidth) {
 
 // Sætter delfinens venstre position med offset, samtidig med at den holder sig indenfor clickArea
     dolphin.style.left = `${Math.min(areaWidth - 150, Math.max(0, x - 75 + offset))}px`; 
+    dolphin.style.top = `${y}px`; 
 
  // Tilføjer delfinen til clickArea i DOM’en, så den bliver synlig
     clickArea.appendChild(dolphin); 

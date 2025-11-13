@@ -25,7 +25,9 @@ const trashData = [
     audio: "./assets/audio/findmetalcan.mp3",
   },
 ];
+const fartSound = new Audio("../assets/audio/fart.mp3");
 
+const nutte = document.getElementById('nutte');
 const itemsContainer = document.querySelector(".items");
 const swimmer = document.querySelector(".swimmer");
 const home = document.querySelector(".home");
@@ -144,6 +146,7 @@ function setupGame() {
   });
 
   console.log(`🐢 Collect the ${trashData[nextIndex].name} first!`);
+  //dashboard to show info?
   const sound = new Audio(trashData[nextIndex].audio);
   sound.play();
 
@@ -289,19 +292,21 @@ document.body.onpointermove = (event) => {
 
   // need cooldown on this so it only runs max 1 per 4seconds
   if (isColliding(swimmerRect, fishRect)) {
-    if (lives == 0) {
-      const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
-      resetGameAudio.play();
-      setupGame();
-    }
-    swimmer.style.transform = "scale(2)";
+    //if (lives == 0) {
+      //const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
+      //resetGameAudio.play();
+      //setupGame();
+    //}
+    // swimmer.style.transform="scale(2)";
 
-    const fartSound = new Audio("../assets/audio/fart.mp3");
     fartSound.play();
     console.log(`🔥 Ramt af hajen, mistet 1 liv du har ${lives--} liv tilbage`);
 
+    nutte.setAttribute("src","./assets/svg/nutte-puff.svg")
+    setTimeout(() => nutte.setAttribute("src","./assets/svg/nutte.svg"), 8000);
+
     swimmer.style.transform = `translateY(${event.clientX}px, ${
-  event.clientY + 100
+  event.clientY + 50
     }px)`;
 
     document.querySelector('.fart').style.opacity="1"
