@@ -1,5 +1,5 @@
 // --- Trash data ---
-
+"use strict";
 //Intro lyd/loop der siger:: Mini helt, hjælp mig, jeg har brug for din hjælp!
 //Yes, så kører vi, det tager kun 2minutter men du redder nutte!
 
@@ -300,6 +300,7 @@ document.body.onpointermove = (event) => {
     // swimmer.style.transform="scale(2)";
 
     fartSound.play();
+    spawnFartBubbles();
     console.log(`🔥 Ramt af hajen, mistet 1 liv du har ${lives--} liv tilbage`);
 
     nutte.setAttribute("src","./assets/svg/nutte-puff.svg")
@@ -353,3 +354,34 @@ document.body.onpointermove = (event) => {
 
 // Wait for user to interact before starting the game
 document.body.addEventListener("pointermove", setupGame, { once: true });
+
+
+// prutbobler nutte
+
+function spawnFartBubbles() {
+  const fart = document.querySelector('.fart');
+  const bubbleCount = Math.floor(Math.random() * 3) + 3; // 3-5 bobler
+
+  for (let i = 0; i < bubbleCount; i++) {
+    setTimeout(() => {
+      const bubble = document.createElement('div');
+      bubble.classList.add('fart-bubble');
+
+      // Tilfældig størrelse
+      const size = Math.random() * 20 + 20; // 20px - 40px
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+
+      // Tilfældig X-position indenfor fart
+      const x = Math.random() * (fart.offsetWidth - size);
+      bubble.style.left = `${x}px`;
+
+      fart.appendChild(bubble);
+
+      // Fjern boblen efter animation
+      setTimeout(() => {
+        bubble.remove();
+      }, 500);
+    }, i * 100); // små forsinkelser mellem bobler
+  }
+}
