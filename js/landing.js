@@ -1,6 +1,6 @@
 "use strict";
 
-// 🪸 Array med alle fiskene fra dit info-board
+// 🪸 Array med alle fiskene fra info-board
 const seaInfo = [
   {
     className: "vandmand-slide",
@@ -28,7 +28,7 @@ const seaInfo = [
     funFact: "Søanemonen ligner en blomst, men den er faktisk et rovdyr med fangarme, der fanger små fisk!",
     uniqueThing: "Har usynlige superklæbrige arme 🦸‍♀️",
     soundSrc: "./assets/audio/jegerensoeanemone.mp3",
-    soundLine: "Se mine seje arme! De er usynlige – og superklæbrige!",
+    soundLine: "Se mine seje arme! De er usynlige - og superklæbrige!",
   },
   {
     className: "shark-slide",
@@ -37,7 +37,7 @@ const seaInfo = [
     funFact: "Hajer har eksisteret længere end dinosaurerne og har et super-skarpt sanseapparat!",
     uniqueThing: "Kan lugte én dråbe blod i et helt svømmebassin 🩸",
     soundSrc: "./assets/audio/jegerenhaj.mp3",
-    soundLine: "Jeg er hajen! Havets superhelt – jeg kan lugte alt og svømmer som lynet!",
+    soundLine: "Jeg er hajen! Havets superhelt - jeg kan lugte alt og svømmer som lynet!",
   },
   {
     className: "crab-slide",
@@ -46,7 +46,7 @@ const seaInfo = [
     funFact: "Krabber går sidelæns, men de er lynhurtige, når de ser mad - eller farer!",
     uniqueThing: "Er mester i at breakdance 🕺 (sidelæns!)",
     soundSrc: "./assets/audio/jegerenkrabbe.mp3",
-    soundLine: "Klik klik! Jeg går sidelæns som en dansemaskine – pas på mine klør!",
+    soundLine: "Klik klik! Jeg går sidelæns som en dansemaskine - pas på mine klør!",
   },
   {
     className: "urfisk-slide",
@@ -55,7 +55,7 @@ const seaInfo = [
     funFact: "De første fisk, der lignede moderne fisk - de fik finner, skæl og begyndte at svømme hurtigt!",
     uniqueThing: "Havets oldefar med turbo-finner 🧓💨",
     soundSrc: "./assets/audio/jegerenurfisk.mp3",
-    soundLine: "Jeg er urfisken! Den første med turbo-finner – uden mig, ingen Nemo!",
+    soundLine: "Jeg er urfisken! Den første med turbo-finner - uden mig, ingen Nemo!",
   },
   {
     className: "nutte-puff-slide",
@@ -64,7 +64,7 @@ const seaInfo = [
     funFact: "Når den bliver bange, puster den sig op som en ballon fuld af pigge!",
     uniqueThing: "Kan blive dobbelt så stor på ét sekund 🎈",
     soundSrc: "./assets/audio/jegerenpindsvinefisk.mp3",
-    soundLine: "Pffffft! Jeg puster mig op som en ballon – ingen tør røre mig!",
+    soundLine: "Pffffft! Jeg puster mig op som en ballon - ingen tør røre mig!",
   },
   {
     className: "tun-slide",
@@ -73,7 +73,7 @@ const seaInfo = [
     funFact: "Tunen er havets fartdjævel! Den kan svømme hurtigere end en bil i byen!",
     uniqueThing: "Kan slå delfiner i kapløb 🏁",
     soundSrc: "./assets/audio/jegerentun.mp3",
-    soundLine: "Wrooom! Jeg er tunfisken – havets raket! Ingen fanger mig!",
+    soundLine: "Wrooom! Jeg er tunfisken - havets raket! Ingen fanger mig!",
   },
   {
     className: "klovnefisk-slide",
@@ -98,15 +98,11 @@ const seaInfo = [
     animalName: "Delfin",
     age: "~15 mio. år",
     funFact: "Delfiner er super smarte og kan genkende sig selv i spejlet!",
-    uniqueThing: "",
+    uniqueThing: "Delfiner sover med det ene øje åbent - så de kan holde øje med, om der kommer en fjollet fisk forbi!",
     soundSrc: "sounds/delfin.mp3",
     soundLine: "Hej, jeg er en delfin! Jeg bruger lyd til at navigere og finde mad i havet!",
 
   },
-  
-
-
-  
   {
   className: "dannebrogsreje-slide",
   animalName: "Dannebrogsreje",
@@ -115,8 +111,8 @@ const seaInfo = [
   uniqueThing: "Er havets frisør 💇‍♂️ – og Danmarks mest patriotiske reje 🇩🇰",
   soundSrc: "./assets/audio/jegerenreje.mp3",
   soundLine: "Hejsa! Jeg er Dannebrogsrejen – jeg gør fiskene rene og bærer farverne fra Dannebrog med stolthed!",
-},
- {
+  },
+  {
     className: "gummistoevle-slide",
     animalName: "Gummistøvle",
     age: "Fundet i havet for nylig",
@@ -146,7 +142,7 @@ const seaInfo = [
 
 ];
 
-// 🐚 Når HTML er klar
+// Når HTML er klar
 document.addEventListener("DOMContentLoaded", () => {
   const tooltip = document.getElementById("tooltip");
 
@@ -163,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
       intro.play()
 
 
-  // 🎣 Tilføj tooltip + lyd på hover / click
+  // Tilføj tooltip + lyd på hover / click
   seaInfo.forEach((sea) => {
     //const sound = new Audio(sea.soundSrc);
       const sound = new Audio(sea.soundSrc)
