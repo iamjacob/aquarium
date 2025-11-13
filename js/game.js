@@ -204,8 +204,6 @@ function deliverTrash(trash, index) {
       const gameDoneAudio = new Audio("../assets/audio/juhuugennemfoert.mp3");
       gameDoneAudio.play();
 
-      const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
-      resetGameAudio.play();
 
       finishGame();
     }
@@ -250,7 +248,7 @@ function finishGame() {
   finished = true;
   const msg = document.createElement("div");
   msg.className = "finish-message";
-  msg.textContent = "🎉 All trash delivered! Great job!";
+  msg.textContent = "Alt skrald samlet! Godt arbejde!";
   msg.style.position = "fixed";
   msg.style.top = "50%";
   msg.style.left = "50%";
@@ -263,9 +261,15 @@ function finishGame() {
   msg.style.textAlign = "center";
   msg.style.zIndex = "1000";
   msg.style.cursor = "pointer";
-  msg.textContent += "\n\n🔄 Click to play again!";
+  msg.textContent += "\n\n🔄 Tryk for at spille igen!!";
   msg.addEventListener("click", setupGame);
   document.body.appendChild(msg);
+
+  
+  const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
+  resetGameAudio.play();
+
+
 }
 
 // --- Pointer move logic ---
