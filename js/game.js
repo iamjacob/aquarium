@@ -42,6 +42,51 @@ document.body.addEventListener("scroll", () => {
   }
 });
 
+// Get the div to display the timer
+const timerDiv = document.getElementById('timer');
+
+// Initialize the timer variables
+let startTime;
+let stopTime;
+
+function startTimer() {
+  // Start the timer when the button is clicked
+  startTime = new Date().getTime();
+  setInterval(updateTimer, 10);
+}
+
+function stopTimer() {
+  // Stop the timer when the button is clicked
+  clearInterval(intervalId);
+  const elapsedTime = (new Date().getTime() - startTime) / 1000;
+  timerDiv.innerHTML = `Elapsed time: ${elapsedTime} seconds`;
+  //saveTime?
+  //const name =
+  //to localstorage here!!!!
+}
+
+let intervalId;
+
+// Update the timer every 10ms
+function updateTimer() {
+  const currentTime = new Date().getTime();
+  if (!startTime || !stopTime) return; // Timer not started or stopped yet
+
+  const elapsedTime = (currentTime - startTime);
+  timerDiv.innerHTML = `Elapsed time: ${elapsedTime} ms`;
+}
+
+// Start the timer when the page loads
+document.addEventListener('DOMContentLoaded', startTimer);
+
+// Stop and restart the timer on button clicks
+const stopButton = document.getElementById('stop-button');
+// stopButton.addEventListener('click', () => {
+//   stopTimer();
+// });
+
+const startAgainButton = document.getElementById('start-again-button');
+startAgainButton.addEventListener('click', startTimer());
 
 // --- Setup game ---
 function setupGame() {
@@ -79,7 +124,7 @@ function setupGame() {
     document.body.appendChild(trash);
   });
 
-  console.clear();
+
   console.log(`🐢 Collect the ${trashData[nextIndex].name} first!`);
   const sound = new Audio(trashData[nextIndex].audio)
   //const sound = new Audio('../assets/audio/findcykelhjulet.mp3')
@@ -100,6 +145,7 @@ function createFish() {
   fish.style.left = "10vw";
   document.body.appendChild(fish);
 
+    startTimer()
 	
   let direction = 1;
   setInterval(() => {
@@ -179,7 +225,7 @@ function flyBack(trash) {
   requestAnimationFrame(animate);
 }
 
-// --- Finish message ---
+// -----||||-- MAKE TO HTML DELETE THIS SHIT CODE!
 function finishGame() {
   finished = true;
   const msg = document.createElement("div");

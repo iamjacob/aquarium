@@ -217,9 +217,14 @@ function swapImages() {
   vandmand.classList.toggle("swapped-left");
 }
 
+
 if (nutte) {
   nutte.addEventListener("click", () => {
     const soundNutte = new Audio("./assets/audio/vilduspillemedmig.mp3");
+    //setTimeout() //swapImages ./assets/svg/nutte.svg
+    nutte.setAttribute("src","./assets/svg/nutte.svg")
+    setTimeout(() => nutte.setAttribute("src","./assets/svg/nutte-puff.svg"), 8000);
+    //
     swapImages();
     console.log('nutte')
     soundNutte.play();

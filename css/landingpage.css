@@ -18,8 +18,13 @@ body {
   /*background: radial-gradient(circle at 20% 20%, #00d4ff, #0061ff, #2400ff);*/
   background-size: 100% 100%;
   overflow: hidden;
-  background: radial-gradient( blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue,blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue,blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue,blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue ,lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue, blue, lightblue);
+  background: radial-gradient( blue, lightblue, blue, lightblue, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff,blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff,blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff,blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue ,#0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff, blue, #0061ff);
   /*background: radial-gradient(circle at 0% 0%, #00d4ff, #0061ff, #2400ff);*/
+  background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+
 }
 
 /*animation: waterFlow 5s ease-in infinite;*/
@@ -67,7 +72,7 @@ body {
 }
 
 
-/* css til tekst display*/
+/* css til tekst display tag dette her*/
 .tooltip {
   position: fixed;
   right: 16px;
@@ -103,25 +108,24 @@ body {
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height:80px;
     align-items: end;
-    gap: 150px;
     pointer-events: none;
 }
 
 .options a{
-    transform: scale(2);
+    transform: scale(1);
     transition: ease .2s all;
     pointer-events: auto;
 
 }
 
 .options a:hover{
-    transform: scale(1.8);
+    transform: scale(1.1);
 }
 
-.options a:hover + .nutte{
-    transform: scale(.8);
+.options a:hover ~ .nutte{
+    transform: scale(1.1);
 }
 
 /*
@@ -132,15 +136,22 @@ body {
 
 .landing{
   display: flex;
-  justify-content: space-around;
+  justify-content: unset;
   align-items: center;
   flex-direction: column;
+
+
+    display: flex;
+    height: calc(100vh - 80px);
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
-  
+
 .landing h1, .landing p{
   font-family: "Londrina Solid", sans-serif;
   text-align:center;
-  
+  font-size: 32px;
 }
 
 .landing object {
@@ -175,9 +186,9 @@ body {
     transform: scale(0.5) !important;
 } */
 
-
+/*denne her miriam*/
 .infinite-slider {
-width: 100vw;
+    width: 100vw;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
@@ -231,6 +242,13 @@ width: 100vw;
 }
 
 
+
+
+/*duuh  hertil cut*/
+
+
+
+
 /* Swap animations */
 .swapped-right {
   /* transform: translateX(700px); */
@@ -246,25 +264,24 @@ width: 100vw;
 
 .swapped-left {
    transform: translateX(20vw);
-    position: absolute;
-    z-index: 100;
+   position: absolute;
+   z-index: 100;
 }
 
 .vandmand {
     transform: translateX(50vw);
     position: absolute;
     z-index: 100;
+}
 
-  }
 
   .nutte {
    transform: translateX(20vw);
-
-  /* transform: translate(-50%, -50%); */
-    position: absolute;
-    /* top: 50%; */
-    /* left: 60%; */
-    z-index: 100;
+   /* transform: translate(-50%, -50%); */
+   position: absolute;
+   /* top: 50%; */
+   /* left: 60%; */
+   z-index: 100;
 }
 
 
@@ -286,11 +303,19 @@ transition: ease all .2s;
   }
 
   .options{
-    gap: 30px;
-    bottom:16px;
+    gap: 4px;
+    /* bottom:16px; */
 }
 
   .options a {
     transform: scale(1);
   }
+
+  .landing h1{
+    font-size:18px;
+  }
+  .landing p{
+    font-size: 16px;
+  }
+
 }

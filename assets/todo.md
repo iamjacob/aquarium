@@ -1,3 +1,17 @@
+# altid og ofte og først til sidst, kan i nå det inden jeg kommer`? er i forsinket. :)
+Send alle screenshots til ai og bed den om at "cook so it taste even better!" (ADVARSEL! - på eget ansvar.)
+
+# frede .. en nice ting.
+Du har ikke hært om det, men super simpelt. "Manifest". Behøver jeg sige mere? søg på manifest file pwa eks. vi skal binde/route/connecte de her billeder til iconer, som ligger i assets/icons/!*
+
+# lærke animation med delfiner som springer.
+igen keyframes. tænker 2s eller 1'+ hvor de springer hvor mange gange og bevæger de sige og der skal være til noget man klikker på forsiden på det tomme illussions hav kommer der delfiner. der hopper hurtigt det med at få det til at virke med setTimeout(()=>toggle.class,2000)
+
+
+# Lærke !!! skal lave en voice til nutte på forsiden, 
+frederik har de andre. :D - feedback jeg har indhentet undskyld frederik, vi må lægge os ned, igen :(
+# Lærke !!! skal lave en voice til nutte på forsiden, 
+
 # Har lavet video
 
 
@@ -42,7 +56,10 @@ console log output og skal vi binde 4 andre taster også? eks? awsd?????? ;)
 
 
 # 5 til... MIRIAM
-Du skal fra forsiden og tage <.tooltip/> og den store array med objekterne, den hører med til det du skal lave inde på akvarie.. :D
+Du skal fra forsiden og tage <.tooltip/> og den store array med objekterne(inde i js mm duuh), den hører med til det du skal lave inde på akvarie..  :D
 Det virker perfekt, det er bare at style tooltip perfekt! :D Den kræver et godt øje! 
 
 
+
+# Miriam hvis du er i tvivl stadigt , 
+så kan vi altid bruge lille skilt ligesom "copyrights broken!" og hvis du har lyst så tegn en ond katte tatovering som vandmanden kan have på. ;)
