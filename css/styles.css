@@ -83,6 +83,16 @@ html, body{
 
 }
 
+.fart{
+  opacity: 0;
+}
+
+
+.reje{
+  position: relative;
+  bottom:50px;
+  transform: scale(.2);
+}
 
 @keyframes swimFish {
   0% {

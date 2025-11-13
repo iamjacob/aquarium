@@ -4,10 +4,26 @@
 //Yes, så kører vi, det tager kun 2minutter men du redder nutte!
 
 const trashData = [
-  { img: "./assets/svg/cykelhjul.svg", name: "Cykelhjul", audio:"./assets/audio/findcykelhjulet.mp3"},
-  { img: "./assets/svg/gummistoevle.svg", name: "Gummistøvler", audio:"./assets/audio/findgummistoevlen.mp3"},
-  { img: "./assets/svg/flaske.svg", name: "Glas Flaske", audio:"./assets/audio/findpantflaske.mp3"},
-  { img: "./assets/svg/can.svg", name: "Metal dåse", audio:"./assets/audio/findmetalcan.mp3"},
+  {
+    img: "./assets/svg/cykelhjul.svg",
+    name: "Cykelhjul",
+    audio: "./assets/audio/findcykelhjulet.mp3",
+  },
+  {
+    img: "./assets/svg/gummistoevle.svg",
+    name: "Gummistøvler",
+    audio: "./assets/audio/findgummistoevlen.mp3",
+  },
+  {
+    img: "./assets/svg/flaske.svg",
+    name: "Glas Flaske",
+    audio: "./assets/audio/findpantflaske.mp3",
+  },
+  {
+    img: "./assets/svg/can.svg",
+    name: "Metal dåse",
+    audio: "./assets/audio/findmetalcan.mp3",
+  },
 ];
 
 const itemsContainer = document.querySelector(".items");
@@ -18,6 +34,7 @@ let carrying = null;
 let carriedIndex = null;
 let nextIndex = 0;
 let finished = false;
+let lives = 3;
 let fish;
 
 // --- Smooth camera scroll setup ---
@@ -36,14 +53,14 @@ let hasPlayed = false;
 
 document.body.addEventListener("scroll", () => {
   if (!hasPlayed && window.scrollY >= 400) {
-    const resetGameAudio = new Audio('../assets/audio/sharkdanger.mp3');
+    const resetGameAudio = new Audio("../assets/audio/sharkdanger.mp3");
     resetGameAudio.play();
     hasPlayed = true;
   }
 });
 
 // Get the div to display the timer
-const timerDiv = document.getElementById('timer');
+const timerDiv = document.getElementById("timer");
 
 // Initialize the timer variables
 let startTime;
@@ -72,28 +89,30 @@ function updateTimer() {
   const currentTime = new Date().getTime();
   if (!startTime || !stopTime) return; // Timer not started or stopped yet
 
-  const elapsedTime = (currentTime - startTime);
+  const elapsedTime = currentTime - startTime;
   timerDiv.innerHTML = `Elapsed time: ${elapsedTime} ms`;
 }
 
 // Start the timer when the page loads
-document.addEventListener('DOMContentLoaded', startTimer);
+//document.addEventListener('DOMContentLoaded', startTimer);
 
 // Stop and restart the timer on button clicks
-const stopButton = document.getElementById('stop-button');
+const stopButton = document.getElementById("stop-button");
 // stopButton.addEventListener('click', () => {
 //   stopTimer();
 // });
 
-const startAgainButton = document.getElementById('start-again-button');
-startAgainButton.addEventListener('click', startTimer());
-
+const startAgainButton = document.getElementById("start-again-button");
+//startAgainButton.addEventListener('click', );
+startTimer();
 // --- Setup game ---
 function setupGame() {
-   const intro = new Audio('../assets/audio/balladeIHavet.mp3')
-      intro.play()
+  const intro = new Audio("../assets/audio/balladeIHavet.mp3");
+  intro.play();
   itemsContainer.innerHTML = "";
-  document.querySelectorAll(".trash, .finish-message, .fish").forEach((el) => el.remove());
+  document
+    .querySelectorAll(".trash, .finish-message, .fish")
+    .forEach((el) => el.remove());
 
   carrying = null;
   carriedIndex = null;
@@ -124,15 +143,11 @@ function setupGame() {
     document.body.appendChild(trash);
   });
 
-
   console.log(`🐢 Collect the ${trashData[nextIndex].name} first!`);
-  const sound = new Audio(trashData[nextIndex].audio)
-  //const sound = new Audio('../assets/audio/findcykelhjulet.mp3')
-  sound.play()
-  
-  
+  const sound = new Audio(trashData[nextIndex].audio);
+  sound.play();
+
   createFish();
-  
 }
 
 // --- Create fixed fish (danger!) ---
@@ -145,8 +160,8 @@ function createFish() {
   fish.style.left = "10vw";
   document.body.appendChild(fish);
 
-    startTimer()
-	
+  startTimer();
+
   let direction = 1;
   setInterval(() => {
     if (finished) return;
@@ -181,24 +196,24 @@ function deliverTrash(trash, index) {
     if (nextIndex < trashData.length) {
       console.log(`👉 Next: collect the ${trashData[nextIndex].name}`);
       const findNextAudio = new Audio(trashData[nextIndex].audio);
-      findNextAudio.play()
+      findNextAudio.play();
     } else {
-      const gameDoneAudio = new Audio('../assets/audio/juhuugennemfoert.mp3');
-      gameDoneAudio.play()
+      const gameDoneAudio = new Audio("../assets/audio/juhuugennemfoert.mp3");
+      gameDoneAudio.play();
 
-      const resetGameAudio = new Audio('../assets/audio/spilleigen.mp3');
-      resetGameAudio.play()
+      const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
+      resetGameAudio.play();
 
       finishGame();
-
-
     }
   } else {
-    console.log(`❌ Wrong item! That was the ${trashData[index].name}, you should deliver the ${trashData[nextIndex].name}!`);
-    
-    const wrongItemGameAudio = new Audio('../assets/audio/provIgen.mp3');
-    wrongItemGameAudio.play()
-    
+    console.log(
+      `❌ Wrong item! That was the ${trashData[index].name}, you should deliver the ${trashData[nextIndex].name}!`
+    );
+
+    const wrongItemGameAudio = new Audio("../assets/audio/provIgen.mp3");
+    wrongItemGameAudio.play();
+
     flyBack(trash);
   }
 
@@ -227,6 +242,8 @@ function flyBack(trash) {
 
 // -----||||-- MAKE TO HTML DELETE THIS SHIT CODE!
 function finishGame() {
+  //need the button and toggle for show class!
+
   finished = true;
   const msg = document.createElement("div");
   msg.className = "finish-message";
@@ -253,23 +270,48 @@ document.body.onpointermove = (event) => {
   if (finished) return;
 
   const { pageX, pageY, clientY } = event;
- swimmer.style.transform = `translate(${event.clientX}px, ${event.clientY + window.scrollY}px)`;
+  swimmer.style.transform = `translate(${event.clientX}px, ${
+    event.clientY + window.scrollY
+  }px)`;
   swimmer.style.zIndex = "20";
 
   const distanceFromBottom = window.innerHeight - clientY;
   const distanceFromTop = clientY;
-if (distanceFromBottom < 200) targetScroll += 50;
-if (distanceFromTop < 200) targetScroll -= 50;
 
+  if (distanceFromBottom < 200) targetScroll += 50;
+  if (distanceFromTop < 200) targetScroll -= 50;
 
   const swimmerRect = swimmer.getBoundingClientRect();
   const trashItems = document.querySelectorAll(".trash");
 
   // --- Fish danger ---
   const fishRect = fish.getBoundingClientRect();
+
+  // need cooldown on this so it only runs max 1 per 4seconds
   if (isColliding(swimmerRect, fishRect)) {
-    console.log("🔥 You got roasted by the fish!");
-    //animation nutte prut og svøm opad hvis kommer oppe fra eller 
+    if (lives == 0) {
+      const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
+      resetGameAudio.play();
+      setupGame();
+    }
+    swimmer.style.transform = "scale(2)";
+
+    const fartSound = new Audio("../assets/audio/fart.mp3");
+    fartSound.play();
+    console.log(`🔥 Ramt af hajen, mistet 1 liv du har ${lives--} liv tilbage`);
+
+    swimmer.style.transform = `translateY(${event.clientX}px, ${
+  event.clientY + 100
+    }px)`;
+
+    document.querySelector('.fart').style.opacity="1"
+    setTimeout(()=>document.querySelector('.fart').style.opacity="0",2000)
+    
+
+    //3 liv?
+    //then reset the game..
+
+    //animation nutte prut og svøm opad hvis kommer oppe fra eller
     //nedad hvis kommer nede fra.
   }
 
@@ -304,7 +346,5 @@ if (distanceFromTop < 200) targetScroll -= 50;
   }
 };
 
-
-
 // Wait for user to interact before starting the game
-document.body.addEventListener('pointermove', setupGame,{ once: true });
+document.body.addEventListener("pointermove", setupGame, { once: true });
