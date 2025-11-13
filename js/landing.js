@@ -1,6 +1,6 @@
 "use strict";
 
-// 🪸 Array med alle fiskene fra dit info-board
+// 🪸 Array med alle fiskene fra info-board
 const seaInfo = [
   {
     className: "vandmand-slide",
@@ -124,8 +124,8 @@ const seaInfo = [
   soundSrc: "../assets/audio/jegerenreje.mp3",
   image:"../assets/svg/dannebrogsreje.svg",
   soundLine: "Hejsa! Jeg er Dannebrogsrejen – jeg gør fiskene rene og bærer farverne fra Dannebrog med stolthed!",
-},
- {
+  },
+  {
     className: "gummistoevle-slide",
     animalName: "Gummistøvle",
     age: "Fundet i havet for nylig",
@@ -159,7 +159,7 @@ const seaInfo = [
 },
 ];
 
-// 🐚 Når HTML er klar
+// Når HTML er klar
 document.addEventListener("DOMContentLoaded", () => {
   const tooltip = document.getElementById("tooltip");
 
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
      
 
 
-  // 🎣 Tilføj tooltip + lyd på hover / click
+  // Tilføj tooltip + lyd på hover / click
   seaInfo.forEach((sea) => {
     //const sound = new Audio(sea.soundSrc);
       const sound = new Audio(sea.soundSrc)
