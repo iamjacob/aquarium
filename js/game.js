@@ -25,7 +25,6 @@ const trashData = [
     audio: "./assets/audio/findmetalcan.mp3",
   },
 ];
-const fartSound = new Audio("../assets/audio/fart2.mp3");
 
 const nutte = document.getElementById('nutte');
 const livesLeft = document.getElementById('livesLeft');
@@ -301,7 +300,7 @@ if (!sharkCooldown && isColliding(swimmerRect, fishRect)) {
 
   lives--;
   //livesLeft.innerText=lives
-
+  const fartSound = new Audio("../assets/audio/fart2.mp3");
   fartSound.play();
   //   fartSound.addEventListener("ended", () => {
   //     fartSound.currentTime = 0;
@@ -319,11 +318,11 @@ if (!sharkCooldown && isColliding(swimmerRect, fishRect)) {
   document.querySelector('.fart').style.opacity = "1";
   setTimeout(()=>document.querySelector('.fart').style.opacity = "0", 2000);
 
-  // Reset shark cooldown after 25 seconds
+  // Reset shark cooldown after 5 seconds
   setTimeout(() => {
     sharkCooldown = false;
     console.log("🧊 Shark cooldown ended — can take damage again");
-  }, 10000);
+  }, 5000);
 
   // Optional: if lives reach 0 → restart game
   if (lives < 0) {
