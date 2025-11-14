@@ -25,7 +25,7 @@ const trashData = [
     audio: "./assets/audio/findmetalcan.mp3",
   },
 ];
-const fartSound = new Audio("../assets/audio/fart.mp3");
+// const fartSound = new Audio("../assets/audio/fart2.mp3");
 
 const nutte = document.getElementById('nutte');
 const itemsContainer = document.querySelector(".items");
@@ -38,6 +38,8 @@ let nextIndex = 0;
 let finished = false;
 let lives = 3;
 let fish;
+let sharkCooldown = false;
+
 
 // --- Smooth camera scroll setup ---
 let targetScroll = window.scrollY;
@@ -65,35 +67,32 @@ document.body.addEventListener("scroll", () => {
 const timerDiv = document.getElementById("timer");
 
 // Initialize the timer variables
-let startTime;
-let stopTime;
+// let startTime;
+// let stopTime;
 
-function startTimer() {
-  // Start the timer when the button is clicked
-  startTime = new Date().getTime();
-  setInterval(updateTimer, 10);
-}
+// function startTimer() {
+//   // Start the timer when the button is clicked
+//   startTime = new Date().getTime();
+//   setInterval(updateTimer, 10);
+// }
 
-function stopTimer() {
-  // Stop the timer when the button is clicked
-  clearInterval(intervalId);
-  const elapsedTime = (new Date().getTime() - startTime) / 1000;
-  timerDiv.innerHTML = `Elapsed time: ${elapsedTime} seconds`;
-  //saveTime?
-  //const name =
-  //to localstorage here!!!!
-}
-
-let intervalId;
-
-// Update the timer every 10ms
-function updateTimer() {
-  const currentTime = new Date().getTime();
-  if (!startTime || !stopTime) return; // Timer not started or stopped yet
-
-  const elapsedTime = currentTime - startTime;
-  timerDiv.innerHTML = `Elapsed time: ${elapsedTime} ms`;
-}
+// function stopTimer() {
+//   // Stop the timer when the button is clicked
+//   clearInterval(intervalId);
+//   const elapsedTime = (new Date().getTime() - startTime) / 1000;
+//   timerDiv.innerHTML = `Elapsed time: ${elapsedTime} seconds`;
+//   //saveTime?
+//   //const name =
+//   //to localstorage here!!!!
+// }
+// let intervalId;
+// // Update the timer every 10ms
+// function updateTimer() {
+//   const currentTime = new Date().getTime();
+//   if (!startTime || !stopTime) return; // Timer not started or stopped yet
+//   const elapsedTime = currentTime - startTime;
+//   timerDiv.innerHTML = `Elapsed time: ${elapsedTime} ms`;
+// }
 
 // Start the timer when the page loads
 //document.addEventListener('DOMContentLoaded', startTimer);
@@ -106,7 +105,7 @@ const stopButton = document.getElementById("stop-button");
 
 const startAgainButton = document.getElementById("start-again-button");
 //startAgainButton.addEventListener('click', );
-startTimer();
+// startTimer();
 // --- Setup game ---
 function setupGame() {
   const intro = new Audio("../assets/audio/balladeIHavet.mp3");
@@ -136,12 +135,14 @@ function setupGame() {
     // Trash on ground (3vh from bottom)
     const trash = document.createElement("div");
     trash.className = "trash";
+    //trash.className += "trash";
     trash.dataset.index = i;
     trash.style.position = "absolute";
     trash.style.left = `${spacing * (i + 1)}px`;
+    // trash.style.transform = `rotate(${Math.floor(Math.random() * 120)}deg)`;
     trash.style.bottom = "30vh";
     trash.style.zIndex = "10";
-    trash.innerHTML = `<img src="${img}" width="60">`;
+    trash.innerHTML = `<img src="${img}" height="150" width="auto">`;
     document.body.appendChild(trash);
   });
 
@@ -163,7 +164,7 @@ function createFish() {
   fish.style.left = "10vw";
   document.body.appendChild(fish);
 
-  startTimer();
+  // startTimer();
 
   let direction = 1;
   setInterval(() => {
@@ -204,7 +205,6 @@ function deliverTrash(trash, index) {
       const gameDoneAudio = new Audio("../assets/audio/juhuugennemfoert.mp3");
       gameDoneAudio.play();
 
-
       finishGame();
     }
   } else {
@@ -214,7 +214,6 @@ function deliverTrash(trash, index) {
 
     const wrongItemGameAudio = new Audio("../assets/audio/provIgen.mp3");
     wrongItemGameAudio.play();
-
     flyBack(trash);
   }
 
@@ -244,7 +243,6 @@ function flyBack(trash) {
 // -----||||-- MAKE TO HTML DELETE THIS SHIT CODE!
 function finishGame() {
   //need the button and toggle for show class!
-
   finished = true;
   const msg = document.createElement("div");
   msg.className = "finish-message";
@@ -264,12 +262,9 @@ function finishGame() {
   msg.textContent += "\n\n🔄 Tryk for at spille igen!!";
   msg.addEventListener("click", setupGame);
   document.body.appendChild(msg);
-
   
   const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
   resetGameAudio.play();
-
-
 }
 
 // --- Pointer move logic ---
@@ -277,10 +272,15 @@ document.body.onpointermove = (event) => {
   if (finished) return;
 
   const { pageX, pageY, clientY } = event;
-  swimmer.style.transform = `translate(${event.clientX}px, ${
-    event.clientY + window.scrollY
-  }px)`;
+swimmer.style.transform = `translate(${event.clientX}px, ${
+  event.clientY + window.scrollY + 50
+}px)`;
+
   swimmer.style.zIndex = "20";
+
+  // console.log(`translate(${event.clientX}px, ${
+  //   event.clientY + window.scrollY
+  // }px)`)
 
   const distanceFromBottom = window.innerHeight - clientY;
   const distanceFromTop = clientY;
@@ -292,38 +292,39 @@ document.body.onpointermove = (event) => {
   const trashItems = document.querySelectorAll(".trash");
 
   // --- Fish danger ---
-  const fishRect = fish.getBoundingClientRect();
+const fishRect = fish.getBoundingClientRect();
 
-  // need cooldown on this so it only runs max 1 per 4seconds
-  if (isColliding(swimmerRect, fishRect)) {
-    //if (lives == 0) {
-      //const resetGameAudio = new Audio("../assets/audio/spilleigen.mp3");
-      //resetGameAudio.play();
-      //setupGame();
-    //}
-    // swimmer.style.transform="scale(2)";
+if (!sharkCooldown && isColliding(swimmerRect, fishRect)) {
 
-    fartSound.play();
-    spawnFartBubbles();
-    console.log(`🔥 Ramt af hajen, mistet 1 liv du har ${lives--} liv tilbage`);
+  sharkCooldown = true;  // start cooldown
 
-    nutte.setAttribute("src","./assets/svg/nutte-puff.svg")
-    setTimeout(() => nutte.setAttribute("src","./assets/svg/nutte.svg"), 8000);
+  lives--;
+  //fartSound.play();
+  playThrice("../assets/audio/fart2.mp3");
 
-    swimmer.style.transform = `translateY(${event.clientX}px, ${
-  event.clientY + 50
-    }px)`;
+  console.log(`🔥 Ramt af hajen! Du har ${lives} liv tilbage`);
 
-    document.querySelector('.fart').style.opacity="1"
-    setTimeout(()=>document.querySelector('.fart').style.opacity="0",2000)
-    
+  // Nutte animation
+  nutte.setAttribute("src","./assets/svg/nutte-puff.svg");
+  setTimeout(() => nutte.setAttribute("src","./assets/svg/nutte.svg"), 4000);
 
-    //3 liv?
-    //then reset the game..
+  spawnFartBubbles();
 
-    //animation nutte prut og svøm opad hvis kommer oppe fra eller
-    //nedad hvis kommer nede fra.
+  document.querySelector('.fart').style.opacity = "1";
+  setTimeout(()=>document.querySelector('.fart').style.opacity = "0", 2000);
+
+  // Reset shark cooldown after 25 seconds
+  setTimeout(() => {
+    sharkCooldown = false;
+    console.log("🧊 Shark cooldown ended — can take damage again");
+  }, 10000);
+
+  // Optional: if lives reach 0 → restart game
+  if (lives <= 0) {
+    console.log("💀 Ingen liv tilbage — spiller igen!");
+    setupGame();
   }
+}
 
   // --- Pick up ---
   if (!carrying) {
@@ -356,6 +357,22 @@ document.body.onpointermove = (event) => {
   }
 };
 
+function playThrice(src) {
+  let count = 0;
+  const audio = new Audio(src);
+
+  audio.addEventListener("ended", () => {
+    count++;
+    if (count < 2) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+  });
+
+  audio.play();
+}
+
+
 // Wait for user to interact before starting the game
 document.body.addEventListener("pointermove", setupGame, { once: true });
 
@@ -364,7 +381,7 @@ document.body.addEventListener("pointermove", setupGame, { once: true });
 
 function spawnFartBubbles() {
   const fart = document.querySelector('.fart');
-  const bubbleCount = Math.floor(Math.random() * 3) + 3; // 3-5 bobler
+  const bubbleCount = Math.floor(Math.random() * 10) + 10; // 3-5 bobler
 
   for (let i = 0; i < bubbleCount; i++) {
     setTimeout(() => {
@@ -385,7 +402,7 @@ function spawnFartBubbles() {
       // Fjern boblen efter animation
       setTimeout(() => {
         bubble.remove();
-      }, 500);
+      }, 800);
     }, i * 100); // små forsinkelser mellem bobler
   }
 }

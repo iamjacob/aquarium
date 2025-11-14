@@ -14,6 +14,8 @@ html, body{
   overflow: hidden; /* disables scroll */
 }
 
+
+
 .home{
   position: absolute;
 	font-size:22px;
@@ -80,38 +82,66 @@ html, body{
 .fish {
   position: absolute; 
   animation: swimFish 14s linear infinite;
+  height:300px;
+  width:auto;
+}
 
+
+/* .fart {
+  position: relative;
 }
 
 .fart {
   opacity: 0;
+} */
+
+.fart-bubble {
+  position: absolute;
+  width: 30px; 
+  height: 30px;
+  z-index:200;
+  pointer-events: none;
+  background-image: url('../assets/svg/speak-bubble.svg');
+  background-size: cover;
+  filter: hue-rotate(90deg); /* gør den grønlig */
+  transform-origin: center center;
+  animation: bubblePop 0.5s infinite;
 }
 
 .fart-bubble {
   position: absolute;
   width: 30px; 
   height: 30px;
-  opacity: 0;
+  z-index:200;
   pointer-events: none;
-  background-image: url('./assets/svg/speak-bubble.svg');
+  /* background-image: url('../assets/svg/fart2.svg'); */
   background-size: cover;
   filter: hue-rotate(90deg); /* gør den grønlig */
   transform-origin: center center;
-  animation: bubblePop 0.5s forwards;
+  animation: bubblePop 0.5s infinite;
+}
+
+.fart-bubble:nth-child(1n) {
+  background-image: url('../assets/svg/fart1.svg');
+}
+
+.fart-bubble:nth-child(2n) {
+  background-image: url('../assets/svg/fart3.svg');
+}
+
+.fart-bubble:nth-child(3n) {
+  background-image: url('../assets/svg/fart2.svg');
 }
 
 @keyframes bubblePop {
   0% {
     transform: translateY(0) scale(0.5);
-    opacity: 0.8;
   }
   50% {
-    transform: translateY(-60px) scale(1);
-    opacity: 0.8;
+    transform: translate(10px, -60px) scale(1);
   }
   100% {
-    transform: translateY(-100px) scale(0.3);
-    opacity: 0;
+    transform: translate(-10px, -100px) scale(0.3);
   }
 }
 
@@ -138,6 +168,8 @@ html, body{
   position: absolute;
   left: 0;
   top: 0;
+  width: auto;
+  height:140px;
 	transition:ease all .1s;
 }
 
@@ -235,14 +267,15 @@ html, body{
 }
 
 .sten {
-  position: relative;
+  position: absolute;
   z-index: 0;
   pointer-events: none;
   width: 100%;
   height: auto;
   min-width: 100%;
   display: block;
-  transform: translateY(var(--sten-lift)); 
+  bottom:0;
+  /* transform: translateY(var(--sten-lift));  */
 }
 
 .sand {
@@ -254,12 +287,15 @@ html, body{
   min-width: 100%;
   display: block;
   z-index: 1; 
-  transform: translateY(var(--sand-lift));
+  /* transform: translateY(var(--sand-lift)); */
   pointer-events: none; /
 
 }
 
-
+.trash{ 
+  height:70px;
+  width:auto;
+}
 
 
 
