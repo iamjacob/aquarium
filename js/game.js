@@ -25,9 +25,10 @@ const trashData = [
     audio: "./assets/audio/findmetalcan.mp3",
   },
 ];
-// const fartSound = new Audio("../assets/audio/fart2.mp3");
+const fartSound = new Audio("../assets/audio/fart2.mp3");
 
 const nutte = document.getElementById('nutte');
+const livesLeft = document.getElementById('livesLeft');
 const itemsContainer = document.querySelector(".items");
 const swimmer = document.querySelector(".swimmer");
 const home = document.querySelector(".home");
@@ -299,8 +300,13 @@ if (!sharkCooldown && isColliding(swimmerRect, fishRect)) {
   sharkCooldown = true;  // start cooldown
 
   lives--;
-  //fartSound.play();
-  playThrice("../assets/audio/fart2.mp3");
+  //livesLeft.innerText=lives
+
+  fartSound.play();
+  //   fartSound.addEventListener("ended", () => {
+  //     fartSound.currentTime = 0;
+  //     fartSound.play();
+  // });
 
   console.log(`🔥 Ramt af hajen! Du har ${lives} liv tilbage`);
 
@@ -320,9 +326,10 @@ if (!sharkCooldown && isColliding(swimmerRect, fishRect)) {
   }, 10000);
 
   // Optional: if lives reach 0 → restart game
-  if (lives <= 0) {
+  if (lives < 0) {
     console.log("💀 Ingen liv tilbage — spiller igen!");
-    setupGame();
+    //setupGame();
+    window.location.reload();
   }
 }
 
@@ -363,7 +370,7 @@ function playThrice(src) {
 
   audio.addEventListener("ended", () => {
     count++;
-    if (count < 2) {
+    if (count < 3) {
       audio.currentTime = 0;
       audio.play();
     }
